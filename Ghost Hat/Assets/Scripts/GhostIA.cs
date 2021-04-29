@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 public class GhostIA : MonoBehaviour
 {
-    public GhostIA ghost;
-    public FantomeType type;
     public HouseBehaviour maison;
-    Object objet;
+    public GhostIA ghost;
+    public GameObject fantome;
+    public FantomeType type;
     Salle ownRoom;
     int rand;
     private void Awake()
     {
-        rand = Random.Range(0, maison.listSalle.Count);
-        ownRoom = maison.listSalle[rand];
+        ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
         ownRoom.ghostLimit.Add(ghost);
         rand = Random.Range(0, ownRoom.listObject.Count);
-        objet = ownRoom.listObject[rand];
-        objet.fantome = ghost;
+        ownRoom.listObject[rand].fantome = ghost;
         ownRoom.listObject.RemoveAt(rand);        
     }
     void Update()
@@ -35,7 +33,7 @@ public class GhostIA : MonoBehaviour
     }
     public void ActiveGhost()
     {
-        //ghost.SetActive(true);
+        fantome.SetActive(true);
     }
 }
 public enum FantomeType

@@ -168,10 +168,12 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.CameraVision)
         {
             ChangeItem(Inventory.None);
+            itemSlot.SetActive(true);
         }
         else
         {
             ChangeItem(Inventory.CameraVision);
+            itemSlot.SetActive(false);
         }
     }
     void ChangeItem(Inventory item)
@@ -180,28 +182,20 @@ public class UIManager : MonoBehaviour
         switch (_item)
         {
             case Inventory.None:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.Spiritbox:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.Camera:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.Flashlight:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.Radar:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.Cake:
-                itemSlot.SetActive(true);
                 break;
             case Inventory.CameraVision:
-                itemSlot.SetActive(false);
                 break;
         }
-        Debug.Log(_item);
     }
     public void ToMainMenu()
     {
