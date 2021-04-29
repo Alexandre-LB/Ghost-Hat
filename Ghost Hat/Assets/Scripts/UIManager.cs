@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public enum Inventory
 {
     None,
     Spiritbox,
     Camera,
     Cake,
-    Torchlight,
+    Flashlight,
     Radar,
     CameraVision
 }
@@ -41,13 +42,10 @@ public class UIManager : MonoBehaviour
 
     public Text time;
     public Image pointeur;
-    public GameObject itemSlot;
-    public Button spiritbox;
-    public Button cameraSlot;
-    public Button cake;
-    public Button torchlight;
-    public Button radar;
-    public Button cameraVision;
+    [SerializeField]
+    GameObject itemSlot;
+    public GameObject gameScreen;
+    public GameObject pauseScreen;
     void Awake()
     {
         _instance = this;
@@ -56,8 +54,15 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        Panik();
-        TimeCount();     
+        if(GameManager.State == GameState.Game)
+        {
+            TimeCount();
+            Panik();
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            GameManager.Instance.ChangeState(GameState.Pause);
+        }
     }
     void Panik()
     {
@@ -121,15 +126,15 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.Camera);
         }
     }
-    public void Torch()
+    public void Flash()
     {
-        if (_item == Inventory.Torchlight)
+        if (_item == Inventory.Flashlight)
         {
             ChangeItem(Inventory.None);
         }
         else
         {
-            ChangeItem(Inventory.Torchlight);
+            ChangeItem(Inventory.Flashlight);
         }
     }
     public void Radar()
@@ -179,7 +184,7 @@ public class UIManager : MonoBehaviour
             case Inventory.Camera:
                 itemSlot.SetActive(true);
                 break;
-            case Inventory.Torchlight:
+            case Inventory.Flashlight:
                 itemSlot.SetActive(true);
                 break;
             case Inventory.Radar:
@@ -193,5 +198,26 @@ public class UIManager : MonoBehaviour
                 break;
         }
         Debug.Log(_item);
+    }
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ToLevelMap()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ToTuto()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void ToCredit()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void Resume()
+    {
+        pauseScreen.SetActive(false);
+        GameManager.Instance.ChangeState(GameState.Game);
     }
 }
