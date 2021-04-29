@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public enum Inventory
 {
     None,
     Spiritbox,
     Camera,
     Cake,
-    Torchlight,
+    Flashlight,
     Radar,
     CameraVision
 }
@@ -30,6 +31,11 @@ public class UIManager : MonoBehaviour
             return _item;
         }
     }
+    public GameObject gameScreen;
+    public GameObject levelScreen;
+    public GameObject titleSceen;
+    public GameObject creditScreen;
+
     int panik = 100;
     float panikCountDown = 0;
     public float fear;
@@ -41,13 +47,9 @@ public class UIManager : MonoBehaviour
 
     public Text time;
     public Image pointeur;
-    public GameObject itemSlot;
-    public Button spiritbox;
-    public Button cameraSlot;
-    public Button cake;
-    public Button torchlight;
-    public Button radar;
-    public Button cameraVision;
+    [SerializeField]
+    GameObject itemSlot;
+    public GameObject pauseScreen;
     void Awake()
     {
         _instance = this;
@@ -56,8 +58,15 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        Panik();
-        TimeCount();     
+        if(GameManager.State == GameState.Game)
+        {
+            TimeCount();
+            Panik();
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            GameManager.Instance.ChangeState(GameState.Pause);
+        }
     }
     void Panik()
     {
@@ -121,15 +130,15 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.Camera);
         }
     }
-    public void Torch()
+    public void Flash()
     {
-        if (_item == Inventory.Torchlight)
+        if (_item == Inventory.Flashlight)
         {
             ChangeItem(Inventory.None);
         }
         else
         {
-            ChangeItem(Inventory.Torchlight);
+            ChangeItem(Inventory.Flashlight);
         }
     }
     public void Radar()
@@ -179,7 +188,7 @@ public class UIManager : MonoBehaviour
             case Inventory.Camera:
                 itemSlot.SetActive(true);
                 break;
-            case Inventory.Torchlight:
+            case Inventory.Flashlight:
                 itemSlot.SetActive(true);
                 break;
             case Inventory.Radar:
@@ -193,5 +202,46 @@ public class UIManager : MonoBehaviour
                 break;
         }
         Debug.Log(_item);
+    }
+    public void ToMainMenu()
+    {
+        pauseScreen.SetActive(false);
+        creditScreen.SetActive(false);
+        levelScreen.SetActive(false);
+        gameScreen.SetActive(false);
+        titleSceen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        SceneManager.LoadScene(0);
+    }
+    public void ToLevelMap()
+    {
+        titleSceen.SetActive(false);
+        gameScreen.SetActive(false);
+        levelScreen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        SceneManager.LoadScene(12);
+    }
+    public void ChargeLevel(int niveau)
+    {
+        titleSceen.SetActive(false);
+        levelScreen.SetActive(false);
+        gameScreen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.Game);
+        SceneManager.LoadScene(niveau);
+    }
+    public void ToCredit()
+    {
+        titleSceen.SetActive(false);
+        creditScreen.SetActive(true);
+        SceneManager.LoadScene(13);
+    }
+    public void Resume()
+    {
+        pauseScreen.SetActive(false);
+        GameManager.Instance.ChangeState(GameState.Game);
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

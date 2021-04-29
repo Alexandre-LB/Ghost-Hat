@@ -5,7 +5,8 @@ public enum GameState
 {
     MainMenu,
     Game,
-    Pause
+    Pause,
+    End
 }
 public class GameManager : MonoBehaviour
 {
@@ -29,5 +30,19 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
         _state = 0;
+    }
+    public void ChangeState(GameState state)
+    {
+        _state = state;
+        switch (_state)
+        {
+            case GameState.MainMenu:
+                break;
+            case GameState.Game:
+                break;
+            case GameState.Pause:
+                UIManager.Instance.pauseScreen.SetActive(true);
+                break;
+        }
     }
 }
