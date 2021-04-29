@@ -5,22 +5,14 @@ using UnityEngine;
 public class SalleBehaviour : MonoBehaviour
 {
     int nbFantôme = 0;
-    public GameObject fantôme;
-    public GameObject fantôme1;
-    public GameObject fantôme2;
-    public GameObject fantôme3;
-    List<GameObject> fantômes;
-    List<GameObject> objects = new List<GameObject>();
+    public List<GameObject> ghostList = new List<GameObject>();
+    public List<GameObject> objects = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        nbFantôme = Random.Range(1, 5);
+        nbFantôme = ghostList.Count;
         Debug.Log(nbFantôme);
-        fantômes.Add(fantôme);
-        fantômes.Add(fantôme1);
-        fantômes.Add(fantôme2);
-        fantômes.Add(fantôme3);
         MainFantôme();
     }
 
@@ -53,13 +45,16 @@ public class SalleBehaviour : MonoBehaviour
     }
     void ObjectFantôme()
     {
-        int indexO = objects.Count;
-        int indexF = fantômes.Count;
-        int nbAleaO = Random.Range(0, indexO + 1);
-        int nbAleaF = Random.Range(0, indexF + 1);
+        /*int indexO = objects.Count;
+        Debug.Log(indexO);
+        int indexF = ghostList.Count;
+        Debug.Log(indexF);
+        int nbAleaO = Random.Range(0, indexO-1);
+        int nbAleaF = Random.Range(0, indexF-1);
         GameObject AleaObject = objects[nbAleaO];
         GameObject AleaFantôme = objects[nbAleaF];
-        //AleaObject = 
-        //objects.RemoveAt()
+        AleaFantôme.transform.parent = AleaObject.transform;
+        objects.RemoveAt(nbAleaO);
+        ghostList.RemoveAt(nbAleaF);*/
     }
 }
