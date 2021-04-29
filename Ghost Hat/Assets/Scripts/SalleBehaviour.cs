@@ -5,13 +5,13 @@ using UnityEngine;
 public class SalleBehaviour : MonoBehaviour
 {
     int nbFantôme = 0;
-    public List<GameObject> ghostList = new List<GameObject>();
+    //public List<GameObject> ghostList = new List<GameObject>();
     public List<GameObject> objects = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        nbFantôme = ghostList.Count;
+        //nbFantôme = ghostList.Count;
         Debug.Log(nbFantôme);
         MainFantôme();
     }

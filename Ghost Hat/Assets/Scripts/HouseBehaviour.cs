@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HouseBehaviour : MonoBehaviour
 {
-    public List<GameObject> listSalle = new List<GameObject>();
-    public List<GameObject> listFantome = new List<GameObject>();
+    public List<Salle> listSalle = new List<Salle>();
+    public List<GhostIA> listFantome = new List<GhostIA>();
 
     // Start is called before the first frame update
     void Start()

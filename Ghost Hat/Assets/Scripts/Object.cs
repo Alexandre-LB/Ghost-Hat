@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    [HideInInspector]
+    public GhostIA fantome;
     SpriteRenderer spriteRenderer;
     Color defaultcolor;
     Color ghostColor;
