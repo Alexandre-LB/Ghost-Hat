@@ -31,6 +31,11 @@ public class UIManager : MonoBehaviour
             return _item;
         }
     }
+    public GameObject gameScreen;
+    public GameObject levelScreen;
+    public GameObject titleSceen;
+    public GameObject creditScreen;
+
     int panik = 100;
     float panikCountDown = 0;
     public float fear;
@@ -44,7 +49,6 @@ public class UIManager : MonoBehaviour
     public Image pointeur;
     [SerializeField]
     GameObject itemSlot;
-    public GameObject gameScreen;
     public GameObject pauseScreen;
     void Awake()
     {
@@ -201,23 +205,43 @@ public class UIManager : MonoBehaviour
     }
     public void ToMainMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        pauseScreen.SetActive(false);
+        creditScreen.SetActive(false);
+        levelScreen.SetActive(false);
+        gameScreen.SetActive(false);
+        titleSceen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        SceneManager.LoadScene(0);
     }
     public void ToLevelMap()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        titleSceen.SetActive(false);
+        gameScreen.SetActive(false);
+        levelScreen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        SceneManager.LoadScene(12);
     }
-    public void ToTuto()
+    public void ChargeLevel(int niveau)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        titleSceen.SetActive(false);
+        levelScreen.SetActive(false);
+        gameScreen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.Game);
+        SceneManager.LoadScene(niveau);
     }
     public void ToCredit()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        titleSceen.SetActive(false);
+        creditScreen.SetActive(true);
+        SceneManager.LoadScene(13);
     }
     public void Resume()
     {
         pauseScreen.SetActive(false);
         GameManager.Instance.ChangeState(GameState.Game);
+    }
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
