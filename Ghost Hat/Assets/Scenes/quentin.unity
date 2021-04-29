@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4138164579072127211, guid: fa597db80573eaf42894bba434dc2b0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5984329656381097765, guid: fa597db80573eaf42894bba434dc2b0c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -181,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 8777422190859327749, guid: fa597db80573eaf42894bba434dc2b0c, type: 3}
       propertyPath: m_Name
       value: UI Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777422190859327749, guid: fa597db80573eaf42894bba434dc2b0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa597db80573eaf42894bba434dc2b0c, type: 3}
