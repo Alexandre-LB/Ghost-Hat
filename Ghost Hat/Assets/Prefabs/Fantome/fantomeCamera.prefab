@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c283428ed04a49a41829ff96d0ead6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghost: {fileID: 1494659196226152748}
+  maison: {fileID: 0}
+  ghost: {fileID: 0}
+  fantome: {fileID: 0}
   type: 2
 --- !u!60 &8623069600034978415
 PolygonCollider2D:
