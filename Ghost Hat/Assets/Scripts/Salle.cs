@@ -6,6 +6,7 @@ public class Salle : MonoBehaviour
 {
     public HouseBehaviour maison;
     public Salle room;
+    public bool cuisine;
     public List<Object> listObject = new List<Object>();
     public List<GhostIA> ghostLimit = new List<GhostIA>();
 

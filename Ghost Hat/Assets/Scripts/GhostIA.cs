@@ -11,11 +11,7 @@ public class GhostIA : MonoBehaviour
     int rand;
     private void Awake()
     {
-        ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
-        ownRoom.ghostLimit.Add(ghost);
-        rand = Random.Range(0, ownRoom.listObject.Count);
-        ownRoom.listObject[rand].fantome = ghost;
-        ownRoom.listObject.RemoveAt(rand);        
+        ChooseObject();
     }
     void Update()
     {
@@ -30,6 +26,21 @@ public class GhostIA : MonoBehaviour
             case FantomeType.Invisible:
                 break;
         }   
+    }
+    void ChooseObject()
+    {
+        ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
+        if(ghost.type == FantomeType.Gourmand && ownRoom.cuisine)
+        {
+            ChooseObject();
+        }
+        else
+        {
+            ownRoom.ghostLimit.Add(ghost);
+            rand = Random.Range(0, ownRoom.listObject.Count);
+            ownRoom.listObject[rand].fantome = ghost;
+            ownRoom.listObject.RemoveAt(rand);
+        }
     }
     public void ActiveGhost()
     {
