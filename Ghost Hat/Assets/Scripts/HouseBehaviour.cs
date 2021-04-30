@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class HouseBehaviour : MonoBehaviour
 {
+    public int tabX;
+    public int tabY;
     public List<Salle> listSalle = new List<Salle>();
     public List<GhostIA> listFantome = new List<GhostIA>();
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameManager.Instance.cameraRoom = new bool[tabX, tabY];
     }
 }

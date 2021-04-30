@@ -30,7 +30,7 @@ public class GhostIA : MonoBehaviour
     void ChooseObject()
     {
         ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
-        if(ghost.type == FantomeType.Gourmand && ownRoom.cuisine)
+        if(ghost.type == FantomeType.Gourmand && ownRoom.cuisine || ghost.type == FantomeType.Gourmand && ownRoom.gourmand)
         {
             ChooseObject();
         }
@@ -40,6 +40,10 @@ public class GhostIA : MonoBehaviour
             rand = Random.Range(0, ownRoom.listObject.Count);
             ownRoom.listObject[rand].fantome = ghost;
             ownRoom.listObject.RemoveAt(rand);
+            if(ghost.type == FantomeType.Gourmand)
+            {
+                ownRoom.gourmand = true;
+            }
         }
     }
     public void ActiveGhost()

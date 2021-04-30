@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
             return _state;
         }
     }
+    [HideInInspector]
+    public bool[,] cameraRoom;
     private void Awake()
     {
         _instance = this;

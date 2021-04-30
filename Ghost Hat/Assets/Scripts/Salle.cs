@@ -7,9 +7,17 @@ public class Salle : MonoBehaviour
     public HouseBehaviour maison;
     public Salle room;
     public bool cuisine;
+    public int posX;
+    public int posY;
+    [HideInInspector]
+    public bool gourmand;
     public List<Object> listObject = new List<Object>();
     public List<GhostIA> ghostLimit = new List<GhostIA>();
 
+    void Start()
+    {
+        GameManager.Instance.cameraRoom[posX, posY] = true;
+    }
     private void Update()
     {
         if(ghostLimit.Count == 3)
