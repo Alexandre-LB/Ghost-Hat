@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c283428ed04a49a41829ff96d0ead6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghost: {fileID: 1442005436846852765}
+  maison: {fileID: 0}
+  ghost: {fileID: 2011402354201430436}
+  fantome: {fileID: 1442005436846852765}
   type: 0
 --- !u!50 &9086279706221394732
 Rigidbody2D:

@@ -11,5 +11,12 @@ public class HouseBehaviour : MonoBehaviour
     void Awake()
     {
         GameManager.Instance.cameraRoom = new bool[tabX, tabY];
+        for (int i = 0; i < tabX; i++)
+        {
+            for (int j = 0; j < tabY; j++)
+            {
+                GameManager.Instance.cameraRoom[i, j] = false;
+            }
+        }
     }
 }

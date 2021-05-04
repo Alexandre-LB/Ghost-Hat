@@ -35,6 +35,10 @@ public class UIManager : MonoBehaviour
     public GameObject levelScreen;
     public GameObject titleSceen;
     public GameObject creditScreen;
+    public GameObject deathScreen;
+    public GameObject victoryScreen;
+    public GameObject star2;
+    public GameObject star3;
 
     int panik;
     float panikCountDown;
@@ -49,6 +53,8 @@ public class UIManager : MonoBehaviour
     public Image pointeur;
     [SerializeField]
     GameObject itemSlot;
+    public GameObject cake;
+    public GameObject polaroid;
     public GameObject pauseScreen;
     void Awake()
     {
@@ -221,6 +227,8 @@ public class UIManager : MonoBehaviour
     {
         titleSceen.SetActive(false);
         gameScreen.SetActive(false);
+        star2.SetActive(false);
+        star3.SetActive(false);
         levelScreen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.MainMenu);
         if (SceneManager.GetActiveScene().buildIndex != 1)

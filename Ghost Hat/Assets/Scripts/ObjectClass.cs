@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Object : MonoBehaviour
+public class ObjectClass : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public GhostIA fantome;
     SpriteRenderer spriteRenderer;
     Color defaultcolor;

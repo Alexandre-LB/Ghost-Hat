@@ -11,7 +11,7 @@ public class Salle : MonoBehaviour
     public int posY;
     [HideInInspector]
     public bool gourmand;
-    public List<Object> listObject = new List<Object>();
+    public List<ObjectClass> listObject = new List<ObjectClass>();
     public List<GhostIA> ghostLimit = new List<GhostIA>();
 
     void Start()

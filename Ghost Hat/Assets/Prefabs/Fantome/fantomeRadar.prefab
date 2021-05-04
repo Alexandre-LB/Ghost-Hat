@@ -147,5 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c283428ed04a49a41829ff96d0ead6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghost: {fileID: 1463789271899118623}
+  maison: {fileID: 0}
+  ghost: {fileID: 5356975664445928996}
+  fantome: {fileID: 1463789271899118623}
   type: 1
