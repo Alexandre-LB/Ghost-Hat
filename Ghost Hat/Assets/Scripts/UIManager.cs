@@ -36,14 +36,14 @@ public class UIManager : MonoBehaviour
     public GameObject titleSceen;
     public GameObject creditScreen;
 
-    int panik = 100;
-    float panikCountDown = 0;
+    int panik;
+    float panikCountDown;
     public float fear;
 
-    float timer = 0;
-    int hour = 19;
-    int minUni = 0;
-    int minDiz = 0;
+    float timer;
+    int hour;
+    int minUni;
+    int minDiz;
 
     public Text time;
     public Image pointeur;
@@ -54,6 +54,13 @@ public class UIManager : MonoBehaviour
     {
         _instance = this;
         _item = Inventory.None;
+        panik = 100;
+        panikCountDown = 0;
+        timer = 0;
+        hour = 19;
+        minUni = 0;
+        minDiz = 0;
+        pointeur.transform.position = new Vector2(1210, 960);
         time.text = hour + "H" + minDiz + minUni;
     }
     void Update()
@@ -205,7 +212,10 @@ public class UIManager : MonoBehaviour
         gameScreen.SetActive(false);
         titleSceen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.MainMenu);
-        SceneManager.LoadScene(0);
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     public void ToLevelMap()
     {
@@ -213,21 +223,29 @@ public class UIManager : MonoBehaviour
         gameScreen.SetActive(false);
         levelScreen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.MainMenu);
-        SceneManager.LoadScene(12);
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     public void ChargeLevel(int niveau)
     {
         titleSceen.SetActive(false);
         levelScreen.SetActive(false);
+        pauseScreen.SetActive(false);
         gameScreen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.Game);
-        SceneManager.LoadScene(niveau);
+        SceneManager.LoadScene(niveau + 2);
+        Awake();
     }
     public void ToCredit()
     {
         titleSceen.SetActive(false);
         creditScreen.SetActive(true);
-        SceneManager.LoadScene(13);
+    }
+    public void Exit()
+    {
+        Application.Quit();
     }
     public void Resume()
     {
@@ -237,5 +255,7 @@ public class UIManager : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Awake();
+        Resume();
     }
 }
