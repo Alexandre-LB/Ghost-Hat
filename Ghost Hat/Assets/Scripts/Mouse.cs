@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class Mouse : MonoBehaviour
 {
-    Vector3 mousePosition;
+	private bool cam;
+	private float horizontalSpeed = -400;
+	private float verticalSpeed = -400;
+	private float horizontal;
+	private float vertical;
+
     void Update()
     {
-        mousePosition = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, transform.position.z);
-        transform.position = mousePosition;
-    }
+		if (Input.GetMouseButton(1) && cam == false)
+		{
+			horizontal = horizontalSpeed * Input.GetAxis("Mouse X") * Time.deltaTime;
+			vertical = verticalSpeed * Input.GetAxis("Mouse Y") * Time.deltaTime;
+
+			transform.Translate(horizontal, vertical, 0);
+		}
+	}
 }
