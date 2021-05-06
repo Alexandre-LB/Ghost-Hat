@@ -64,7 +64,7 @@ public class GhostIA : MonoBehaviour
             {
                 ownRoom.gourmand = true;
             }
-            transform.position = ownRoom.listObject[rand].transform.position;
+            Instantiate(this, ownRoom.listObject[rand].transform.position, Quaternion.identity);
         }
     }
     public void ActiveGhost()

@@ -41,7 +41,8 @@ public class UIManager : MonoBehaviour
     public GameObject star3;
 
     int panik;
-    float panikCountDown;
+    [HideInInspector]
+    public float panikCountDown;
     public float fear;
 
     float timer;
