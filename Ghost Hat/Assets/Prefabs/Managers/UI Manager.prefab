@@ -133,6 +133,10 @@ MonoBehaviour:
   itemSlot: {fileID: 5984329656428643668}
   cake: {fileID: 2086130556941966623}
   polaroid: {fileID: 8182155356186915416}
+  trepied: {fileID: 2104270586215168394, guid: c4d988762c184e3418c9ca04001bc633, type: 3}
+  capteur: {fileID: 3136223992136143439, guid: 6202b9a7d19ffc6449841dbf4766f892, type: 3}
+  onde: {fileID: 4916162417134072670, guid: a685ac7389065b94888afcb6bcc0c333, type: 3}
+  lampe: {fileID: -1352944831691118925, guid: 5987b995f3af6f44bbe5ae8553d6fd89, type: 3}
   cameraVert: {fileID: 5331141261635632899}
   pauseScreen: {fileID: 5984329655754960614}
 --- !u!1001 &2298669967199055045

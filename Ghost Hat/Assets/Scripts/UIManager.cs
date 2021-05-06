@@ -58,6 +58,15 @@ public class UIManager : MonoBehaviour
     public GameObject cake;
     public GameObject polaroid;
     public CameraItem trepied;
+    CameraItem actualCamera;
+    public SpiritBox capteur;
+    SpiritBox actualSpirit;
+    public Radar onde;
+    Radar actualRadar;
+    public Flashlight lampe;
+    Flashlight actualLight;
+    public Cake gateau;
+    Cake actualCake;
     public GameObject cameraVert;
     public GameObject pauseScreen;
     void Awake()
@@ -130,10 +139,12 @@ public class UIManager : MonoBehaviour
         if(_item == Inventory.Spiritbox)
         {
             ChangeItem(Inventory.None);
+            Destroy(actualSpirit);
         }
         else
         {
             ChangeItem(Inventory.Spiritbox);
+            actualSpirit = Instantiate(capteur, new Vector2(0, 0), Quaternion.identity);
         }
     }
     public void Camera()
@@ -141,11 +152,12 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Camera)
         {
             ChangeItem(Inventory.None);
+            Destroy(actualCamera);
         }
         else
         {
             ChangeItem(Inventory.Camera);
-            Instantiate(trepied, new Vector3(0, 0, -2), Quaternion.identity);
+            actualCamera = Instantiate(trepied, new Vector3(0, 0, -2), Quaternion.identity);
         }
     }
     public void Flash()
@@ -153,10 +165,12 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Flashlight)
         {
             ChangeItem(Inventory.None);
+            Destroy(actualLight);
         }
         else
         {
             ChangeItem(Inventory.Flashlight);
+            actualLight = Instantiate(lampe, new Vector2(0, 0), Quaternion.identity);
         }
     }
     public void Radar()
@@ -164,10 +178,12 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Radar)
         {
             ChangeItem(Inventory.None);
+            Destroy(actualRadar);
         }
         else
         {
             ChangeItem(Inventory.Radar);
+            actualRadar = Instantiate(onde, new Vector2(0, 0), Quaternion.identity);
         }
     }
     public void Cake()
@@ -175,10 +191,12 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Cake)
         {
             ChangeItem(Inventory.None);
+            Destroy(actualCake);
         }
         else
         {
             ChangeItem(Inventory.Cake);
+            actualCake = Instantiate(gateau, new Vector2(0, 0), Quaternion.identity);
         }
     }
     public void CameraVision()

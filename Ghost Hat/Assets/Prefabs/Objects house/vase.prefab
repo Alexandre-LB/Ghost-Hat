@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8254817465550066015}
   m_Layer: 7
   m_Name: vase
-  m_TagString: Untagged
+  m_TagString: HouseObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
