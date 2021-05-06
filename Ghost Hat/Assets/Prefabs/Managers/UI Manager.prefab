@@ -124,6 +124,8 @@ MonoBehaviour:
   victoryScreen: {fileID: 5512947508101502698}
   star2: {fileID: 2272113759887618105}
   star3: {fileID: 868060854050482331}
+  cameraScreen: {fileID: 4106501425777899738, guid: 66ca26e363dd2b54da8482e8f60298ef, type: 3}
+  panik: 0
   fear: 0.4
   time: {fileID: 5984329656512604678}
   pointeur: {fileID: 5984329655499600232}

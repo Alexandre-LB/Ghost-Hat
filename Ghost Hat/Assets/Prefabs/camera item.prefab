@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d2a565bc2890042bdcc1843b42c9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectCamera: {fileID: 0}
+  objectCamera: {fileID: 3886498649149596226, guid: b2404720611994e448ac8a3d4459fb7a, type: 3}

@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
     public GameObject victoryScreen;
     public GameObject star2;
     public GameObject star3;
+    public GameObject cameraScreen;
 
     [HideInInspector]
     public int panik;
@@ -208,6 +209,7 @@ public class UIManager : MonoBehaviour
             case Inventory.Cake:
                 break;
             case Inventory.CameraVision:
+
                 break;
         }
     }

@@ -49,6 +49,7 @@ public class ObjectClass : MonoBehaviour
             if (UIManager.Instance.panik <= 30)
             {
                 UIManager.Instance.panik = 0;
+                UIManager.Instance.pointeur.transform.position = new Vector2(710, UIManager.Instance.pointeur.transform.position.y);
             }
             else
             {
