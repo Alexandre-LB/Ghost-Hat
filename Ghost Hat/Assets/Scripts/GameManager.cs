@@ -54,6 +54,6 @@ public class GameManager : MonoBehaviour
 
     public void CameraScreen()
     {
-        cam.transform.position = mainCam.position;
+        cam.transform.position = new Vector3(mainCam.position.x, mainCam.position.y, -1);
     }
 }
