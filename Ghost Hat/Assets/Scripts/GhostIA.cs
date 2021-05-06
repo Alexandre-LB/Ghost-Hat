@@ -17,7 +17,6 @@ public class GhostIA : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         visible = false;
-        newPos = transform.position;
         ChooseObject();
     }
     void Update()

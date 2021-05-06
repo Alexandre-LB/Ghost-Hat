@@ -61,7 +61,6 @@ public class UIManager : MonoBehaviour
     public GameObject pauseScreen;
     void Awake()
     {
-        //Instantiate(cameraVert, new Vector2(0, 0), Quaternion.identity, GameObject.FindGameObjectWithTag("vision").transform);
         _instance = this;
         _item = Inventory.None;
         panik = 100;
