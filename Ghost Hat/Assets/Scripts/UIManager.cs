@@ -76,10 +76,10 @@ public class UIManager : MonoBehaviour
         {
             TimeCount();
             Panik();
-            if (Input.GetKeyDown("p"))
-            {
-                GameManager.Instance.ChangeState(GameState.Pause);
-            }
+        }
+        if (Input.GetKeyDown("p"))
+        {
+            GameManager.Instance.ChangeState(GameState.Pause);
         }
     }
     void Panik()
