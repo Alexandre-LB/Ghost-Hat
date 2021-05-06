@@ -62,9 +62,9 @@ public class CameraBehaviour : MonoBehaviour
                 currentX--;
             }
         }
-        if (tabSalle != null)
+        if (tabSalle[currentX, currentY] != null)
         {
-            Camera.main.transform.position = tabSalle[currentX, currentY].position;
+            Camera.main.transform.position = Vector2.Lerp(transform.position, tabSalle[currentX, currentY].position, Time.deltaTime);
         }
     }
 }
