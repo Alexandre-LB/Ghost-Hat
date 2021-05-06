@@ -49,7 +49,7 @@ public class CameraItem : Item
 
     private void OnMouseDown()
     {
-        if (placed == true && Input.GetMouseButton(0))
+        if (placed == true && Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
         {
             UIManager.Instance.polaroid.SetActive(true);
             Destroy(gameObject);
