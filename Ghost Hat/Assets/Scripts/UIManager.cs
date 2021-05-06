@@ -57,6 +57,7 @@ public class UIManager : MonoBehaviour
     GameObject itemSlot;
     public GameObject cake;
     public GameObject polaroid;
+    public CameraItem trepied;
     public GameObject cameraVert;
     public GameObject pauseScreen;
     void Awake()
@@ -144,6 +145,7 @@ public class UIManager : MonoBehaviour
         else
         {
             ChangeItem(Inventory.Camera);
+            Instantiate(trepied, new Vector2(0, 0), Quaternion.identity);
         }
     }
     public void Flash()
