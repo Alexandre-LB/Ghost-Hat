@@ -10,6 +10,9 @@ public enum GameState
 }
 public class GameManager : MonoBehaviour
 {
+    public Camera cam;
+    private Transform mainCam;
+
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
     public bool[,] cameraRoom;
     private void Awake()
     {
+        this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
         _instance = this;
         _state = 0;
     }
@@ -46,5 +50,10 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance.pauseScreen.SetActive(true);
                 break;
         }
+    }
+
+    public void CameraScreen()
+    {
+        cam.transform.position = mainCam.position;
     }
 }
