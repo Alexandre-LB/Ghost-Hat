@@ -7,45 +7,67 @@ public class GhostIA : MonoBehaviour
     public GameObject fantome;
     public FantomeType type;
     public int speed;
-    Rigidbody2D rb;
     Vector2 newPos;
     bool visible;
     Salle ownRoom;
     int rand;
-
-    int mouvX;
-    int mouvY;
+    Rigidbody2D rb;
+    float moveTimer = 0;
     private void Awake()
     {
-        visible = false;
         rb = GetComponent<Rigidbody2D>();
-        newPos = rb.position;
+        visible = false;
+        newPos = transform.position;
         ChooseObject();
     }
     void Update()
     {
-        switch (type)
+        moveTimer += Time.deltaTime;
+        if (visible && moveTimer > 1)
         {
-            case FantomeType.Gourmand:
-                break;
-            case FantomeType.Oreille:
-                break;
-            case FantomeType.Timide:
-                break;
-            case FantomeType.Invisible:
-                break;
-        }
-        if (visible)
-        {
-            mouvX = Random.Range((int)ownRoom.transform.position.x - 930, (int)ownRoom.transform.position.x + 930);
-            mouvY = Random.Range((int)ownRoom.transform.position.y - 510, (int)ownRoom.transform.position.y + 510);
-            while(transform.position.x != mouvX || transform.position.y != mouvY)
+            if (transform.position.x < ownRoom.transform.position.x - 4 && transform.position.y < ownRoom.transform.position.y - 2)
             {
-                newPos.x -= newPos.x + Time.deltaTime * speed; 
-                newPos.y -= newPos.y + Time.deltaTime * speed;
-                transform.position = newPos;
+                newPos = new Vector2(Random.Range(0.1f, 1f), Random.Range(0.1f, 1f));
             }
+            else if (transform.position.x < ownRoom.transform.position.x - 4 && transform.position.y > ownRoom.transform.position.y + 2)
+            {
+                newPos = new Vector2(Random.Range(0.1f, 1f), Random.Range(-1f, -0.1f));
+            }
+            else if (transform.position.x > ownRoom.transform.position.x + 4 && transform.position.y < ownRoom.transform.position.y - 2)
+            {
+                newPos = new Vector2(Random.Range(-1f, -0.1f), Random.Range(0.1f, 1f));
+            }
+            else if (transform.position.x > ownRoom.transform.position.x + 4 && transform.position.y > ownRoom.transform.position.y + 2)
+            {
+                newPos = new Vector2(Random.Range(-1f, -0.1f), Random.Range(-1f, -0.1f));
+            }
+            else if(transform.position.x < ownRoom.transform.position.x - 4)
+            {
+                newPos = new Vector2(Random.Range(0.1f, 1f), Random.Range(-1f, 1f));
+            }
+            else if (transform.position.x > ownRoom.transform.position.x + 4)
+            {
+                newPos = new Vector2(Random.Range(-1f, -0.1f), Random.Range(-1f, 1f));
+            }
+            else if (transform.position.y < ownRoom.transform.position.y - 2)
+            {
+                newPos = new Vector2(Random.Range(-1f, 1f), Random.Range(0.1f, 1f));
+            }
+            else if (transform.position.y > ownRoom.transform.position.x + 2)
+            {
+                newPos = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, -0.1f));
+            }
+            else
+            {
+                newPos = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            }
+            moveTimer = 0;
         }
+    }
+    void FixedUpdate()
+    {
+        rb.AddForce(newPos * speed);
+        rb.velocity = Vector2.zero;
     }
     public void ChooseObject()
     {
@@ -59,12 +81,13 @@ public class GhostIA : MonoBehaviour
             ownRoom.ghostLimit.Add(this);
             rand = Random.Range(0, ownRoom.listObject.Count);
             ownRoom.listObject[rand].fantome = this;
+            transform.position = ownRoom.listObject[rand].transform.position;
             ownRoom.listObject.RemoveAt(rand);
             if(type == FantomeType.Gourmand)
             {
                 ownRoom.gourmand = true;
             }
-            Instantiate(this, ownRoom.listObject[rand].transform.position, Quaternion.identity);
+            fantome.SetActive(false);
         }
     }
     public void ActiveGhost()
