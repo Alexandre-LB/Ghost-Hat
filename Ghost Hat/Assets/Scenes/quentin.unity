@@ -404,6 +404,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1600166243431866883, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: trepied
+      value: 
+      objectReference: {fileID: 2104270586215168394, guid: c4d988762c184e3418c9ca04001bc633, type: 3}
     - target: {fileID: 4918372319900228324, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
       propertyPath: m_IsActive
       value: 1

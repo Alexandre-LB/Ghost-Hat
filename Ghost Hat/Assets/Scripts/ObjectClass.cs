@@ -43,6 +43,7 @@ public class ObjectClass : MonoBehaviour
         if (Input.GetMouseButton(0) && fantome != null)
         {
             fantome.ActiveGhost();
+            fantome = null;
         }
         else if (Input.GetMouseButton(0))
         {
