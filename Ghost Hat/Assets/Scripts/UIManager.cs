@@ -57,9 +57,11 @@ public class UIManager : MonoBehaviour
     GameObject itemSlot;
     public GameObject cake;
     public GameObject polaroid;
+    public GameObject cameraVert;
     public GameObject pauseScreen;
     void Awake()
     {
+        //Instantiate(cameraVert, new Vector2(0, 0), Quaternion.identity, GameObject.FindGameObjectWithTag("vision").transform);
         _instance = this;
         _item = Inventory.None;
         panik = 100;
@@ -184,11 +186,13 @@ public class UIManager : MonoBehaviour
         {
             ChangeItem(Inventory.None);
             itemSlot.SetActive(true);
+            cameraVert.SetActive(false);
         }
         else
         {
             ChangeItem(Inventory.CameraVision);
             itemSlot.SetActive(false);
+            cameraVert.SetActive(true);
         }
     }
     void ChangeItem(Inventory item)

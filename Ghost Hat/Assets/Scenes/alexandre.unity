@@ -337,7 +337,7 @@ SpriteRenderer:
   m_Size: {x: 3, y: 3.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &152102731
@@ -352,7 +352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1130511026
 GameObject:
@@ -434,7 +434,7 @@ Transform:
   m_LocalScale: {x: 17.8, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1188797637
 GameObject:
@@ -509,7 +509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1188797641
 MonoBehaviour:
@@ -630,7 +630,7 @@ Transform:
   m_LocalScale: {x: 35.6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1283550058
 PrefabInstance:
@@ -699,6 +699,14 @@ PrefabInstance:
     - target: {fileID: 680500425240693987, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
       propertyPath: m_Name
       value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020543222562188353, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020543222562188357, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3115152035162813503, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
       propertyPath: cam
@@ -862,7 +870,7 @@ Transform:
   m_LocalScale: {x: 17.8, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3886498651077907209
 PrefabInstance:
@@ -975,6 +983,10 @@ PrefabInstance:
     - target: {fileID: 4106501425777899738, guid: 66ca26e363dd2b54da8482e8f60298ef, type: 3}
       propertyPath: m_Name
       value: Camera view
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106501425777899738, guid: 66ca26e363dd2b54da8482e8f60298ef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66ca26e363dd2b54da8482e8f60298ef, type: 3}
