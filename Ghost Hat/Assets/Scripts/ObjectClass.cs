@@ -46,8 +46,15 @@ public class ObjectClass : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            UIManager.Instance.panikCountDown -= 30;
-            UIManager.Instance.pointeur.transform.position = new Vector2(UIManager.Instance.pointeur.transform.position.x - 150, UIManager.Instance.pointeur.transform.position.y);
+            if (UIManager.Instance.panik <= 30)
+            {
+                UIManager.Instance.panik = 0;
+            }
+            else
+            {
+                UIManager.Instance.panik -= 30;
+                UIManager.Instance.pointeur.transform.position = new Vector2(UIManager.Instance.pointeur.transform.position.x - 150, UIManager.Instance.pointeur.transform.position.y);
+            }
         }
     }
 }

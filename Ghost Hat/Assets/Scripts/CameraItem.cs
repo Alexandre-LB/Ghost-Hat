@@ -46,7 +46,6 @@ public class CameraItem : Item
 
     IEnumerator ItemActivate()
     {
-        Debug.Log("b");
         yield return new WaitForSeconds(2);
         placed = true;
     }
