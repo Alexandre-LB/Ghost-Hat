@@ -196,7 +196,7 @@ public class UIManager : MonoBehaviour
             cameraVert.SetActive(true);
         }
     }
-    void ChangeItem(Inventory item)
+    public void ChangeItem(Inventory item)
     {
         _item = item;
         switch (_item)

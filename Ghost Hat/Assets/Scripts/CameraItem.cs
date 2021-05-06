@@ -11,6 +11,7 @@ public class CameraItem : Item
     private float mainCamPosX;
     private float mainCamPosY;
     public bool cameraButton;
+    public Rigidbody2D rb2d;
 
     private void Awake()
     {
@@ -27,12 +28,14 @@ public class CameraItem : Item
         if (Input.GetMouseButton(0) && placed == false)
         {
             move = true;
+            UIManager.Instance.ChangeItem(Inventory.None);
             UIManager.Instance.polaroid.SetActive(false);
             GameManager.Instance.CameraScreen();
             cameraButton = true;
             mainCamPosX = mainCam.position.x;
             mainCamPosY = mainCam.position.x;
             StartCoroutine(ItemActivate());
+            rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
 
         if (UIManager.Item == Inventory.CameraVision)
