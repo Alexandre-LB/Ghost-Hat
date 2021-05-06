@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightAura
   - HouseObject
+  - vision
   layers:
   - Default
   - TransparentFX
