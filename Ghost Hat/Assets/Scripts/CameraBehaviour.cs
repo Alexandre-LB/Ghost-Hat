@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,17 +5,17 @@ using UnityEngine;
 public class CameraBehaviour : MonoBehaviour
 {
     Transform[,] tabSalle;
-    public List<SalleData> salles = new List<SalleData>();
     int currentX = 0;
     int currentY = 0;
     int nbSalleX;
     int nbSalleY;
+    public HouseBehaviour house;
 
     // Start is called before the first frame update
     void Start()
     {
-        nbSalleX = salles.Count/2 +1;
-        nbSalleY = salles.Count / 2+1 ;
+        nbSalleX = house.salles.Count/2 +1;
+        nbSalleY = house.salles.Count / 2+1 ;
         tabSalle = new Transform[nbSalleX, nbSalleY];
         for (int i = 0; i < nbSalleY; i++)
         {
@@ -25,7 +24,7 @@ public class CameraBehaviour : MonoBehaviour
                 tabSalle[j, i] = null;
             }
         }
-        foreach(SalleData salleData in salles)
+        foreach(SalleData salleData in house.salles)
         {
             tabSalle[salleData.posX, salleData.posY] = salleData.position;
         }
@@ -64,15 +63,9 @@ public class CameraBehaviour : MonoBehaviour
         }
         if (tabSalle[currentX, currentY] != null)
         {
-            Camera.main.transform.position = Vector2.Lerp(transform.position, tabSalle[currentX, currentY].position, Time.deltaTime);
+            Camera.main.transform.position = Vector2.Lerp(transform.position, tabSalle[currentX, currentY].position, 5*Time.deltaTime);
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         }
     }
 }
-[Serializable]
-public class SalleData
-{
-    public Transform position;
-    public int posX;
-    public int posY;
-}
+
