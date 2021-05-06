@@ -23,20 +23,19 @@ public class CameraItem : Item
             Mouse();
         }
         
-        if (Input.GetMouseButton(0) && placed == false)
+        if (Input.GetMouseButton(0))
         {
             move = true;
             UIManager.Instance.polaroid.SetActive(false);
             mainCamPosX = mainCam.position.x;
             mainCamPosY = mainCam.position.x;
-            ItemActivate();
+            StartCoroutine(ItemActivate());
         }
 
-        if (Input.GetMouseButton(0) && placed == true)
+        if (placed == true && Input.GetMouseButton(0))
         {
-            Debug.Log("a");
             UIManager.Instance.polaroid.SetActive(true);
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         if (UIManager.Item == Inventory.CameraVision)
@@ -47,7 +46,17 @@ public class CameraItem : Item
 
     IEnumerator ItemActivate()
     {
-        yield return new WaitForSeconds(1);
+        Debug.Log("b");
+        yield return new WaitForSeconds(2);
         placed = true;
+    }
+
+    private void OnMouseOver()
+    {
+        if (placed == true && Input.GetMouseButton(0))
+        {
+            UIManager.Instance.polaroid.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 }
