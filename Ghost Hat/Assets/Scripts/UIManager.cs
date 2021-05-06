@@ -40,9 +40,9 @@ public class UIManager : MonoBehaviour
     public GameObject star2;
     public GameObject star3;
 
-    int panik;
     [HideInInspector]
-    public float panikCountDown;
+    public int panik;
+    float panikCountDown;
     public float fear;
 
     float timer;
@@ -76,10 +76,10 @@ public class UIManager : MonoBehaviour
         {
             TimeCount();
             Panik();
-        }
-        if (Input.GetKeyDown("p"))
-        {
-            GameManager.Instance.ChangeState(GameState.Pause);
+            if (Input.GetKeyDown("p"))
+            {
+                GameManager.Instance.ChangeState(GameState.Pause);
+            }
         }
     }
     void Panik()
