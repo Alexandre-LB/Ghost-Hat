@@ -145,7 +145,7 @@ public class UIManager : MonoBehaviour
         else
         {
             ChangeItem(Inventory.Camera);
-            Instantiate(trepied, new Vector2(0, 0), Quaternion.identity);
+            Instantiate(trepied, new Vector3(0, 0, -2), Quaternion.identity);
         }
     }
     public void Flash()
