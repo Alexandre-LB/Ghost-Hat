@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3096982752102220163}
   - component: {fileID: 3096982752102220162}
   - component: {fileID: 3096982752102220161}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rond violet
   m_TagString: LightAura
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3096982753325509041}
   - component: {fileID: 3096982753325509040}
   - component: {fileID: -1352944831691118925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lampe torche utilisation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
