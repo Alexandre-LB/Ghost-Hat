@@ -44,7 +44,6 @@ public class ObjectClass : MonoBehaviour
         if (collision.CompareTag("LightAura") && this.gameObject.tag == "Lumiere")
         {
             spriteRenderer.color = ghostColor;
-            Debug.Log("test");
         }
     }
 

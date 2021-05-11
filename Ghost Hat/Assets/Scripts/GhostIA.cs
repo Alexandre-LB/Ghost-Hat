@@ -94,6 +94,12 @@ public class GhostIA : MonoBehaviour
         visible = true;
         fantome.SetActive(true);
     }
+    private void OnMouseDown()
+    {
+        maison.listFantome.Remove(this);
+        ownRoom.ghostLimit.Remove(this);
+        Destroy(this.gameObject);
+    }
 }
 public enum FantomeType
 {
