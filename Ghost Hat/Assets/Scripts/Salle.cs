@@ -9,6 +9,8 @@ public class Salle : MonoBehaviour
     public Salle room;
     public bool cuisine;
     [HideInInspector]
+    public bool cake;
+    [HideInInspector]
     public bool gourmand;
     public List<ObjectClass> listObject = new List<ObjectClass>();
     public List<GhostIA> ghostLimit = new List<GhostIA>();

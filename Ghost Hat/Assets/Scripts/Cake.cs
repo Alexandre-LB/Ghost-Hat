@@ -8,11 +8,6 @@ public class Cake : Item
     private bool placed;
     public Rigidbody2D rb2d;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (move == false)
