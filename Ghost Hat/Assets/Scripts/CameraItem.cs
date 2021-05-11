@@ -35,7 +35,7 @@ public class CameraItem : Item
             cameraButton = true;
             mainCamPosX = mainCam.position.x;
             mainCamPosY = mainCam.position.x;
-            StartCoroutine(ItemActivate());
+            placed = true;
             rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
 
@@ -43,12 +43,6 @@ public class CameraItem : Item
         {
             objectCamera.transform.position = new Vector3(mainCamPosX, mainCamPosY, -1);
         }
-    }
-
-    IEnumerator ItemActivate()
-    {
-        yield return new WaitForSeconds(1);
-        placed = true;
     }
 
     private void OnMouseDown()

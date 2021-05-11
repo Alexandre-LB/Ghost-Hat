@@ -25,15 +25,9 @@ public class Cake : Item
             move = true;
             UIManager.Instance.cake.SetActive(false);
             UIManager.Instance.ChangeItem(Inventory.None);
-            StartCoroutine(ItemActivate());
+            placed = true;
             rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
-    }
-
-    IEnumerator ItemActivate()
-    {
-        yield return new WaitForSeconds(1);
-        placed = true;
     }
 
     private void OnMouseDown()
