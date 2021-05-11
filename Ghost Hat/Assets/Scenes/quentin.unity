@@ -606,6 +606,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8480957603424784952, guid: 799436d0f8be00040bb8872aefb446f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8480957603424784954, guid: 799436d0f8be00040bb8872aefb446f9, type: 3}
       propertyPath: m_Name
       value: vase (1)
@@ -685,6 +689,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8480957603424784952, guid: 799436d0f8be00040bb8872aefb446f9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8480957603424784954, guid: 799436d0f8be00040bb8872aefb446f9, type: 3}
       propertyPath: m_Name
       value: vase
