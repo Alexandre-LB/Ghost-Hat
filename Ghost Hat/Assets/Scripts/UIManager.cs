@@ -143,7 +143,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualSpirit.gameObject);
         }
-        else
+        else if(_item == Inventory.None)
         {
             ChangeItem(Inventory.Spiritbox);
             actualSpirit = Instantiate(capteur, new Vector2(0, 0), Quaternion.identity);
@@ -156,7 +156,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualCamera.gameObject);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Camera);
             actualCamera = Instantiate(trepied, new Vector3(0, 0, -2), Quaternion.identity);
@@ -169,7 +169,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualLight.gameObject);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Flashlight);
             actualLight = Instantiate(lampe, new Vector2(0, 0), Quaternion.identity);
@@ -182,7 +182,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualRadar.gameObject);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Radar);
             actualRadar = Instantiate(onde, new Vector2(0, 0), Quaternion.identity);
@@ -195,7 +195,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualCake.gameObject);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Cake);
             actualCake = Instantiate(gateau, new Vector2(0, 0), Quaternion.identity);
@@ -209,7 +209,7 @@ public class UIManager : MonoBehaviour
             itemSlot.SetActive(true);
             cameraVert.SetActive(false);
         }
-        else if (_item != Inventory.CameraVision && placed == true)
+        else if (_item == Inventory.None && placed == true)
         {
             ChangeItem(Inventory.CameraVision);
             itemSlot.SetActive(false);

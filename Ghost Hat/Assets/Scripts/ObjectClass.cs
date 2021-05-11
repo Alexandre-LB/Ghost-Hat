@@ -41,15 +41,16 @@ public class ObjectClass : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LightAura") && fantome != null)
+        if (collision.CompareTag("LightAura") && gameObject.tag == "Lumiere")
         {
             spriteRenderer.color = ghostColor;
+            Debug.Log("test");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("LightAura"))
+        if (collision.CompareTag("LightAura") && gameObject.tag == "Lumiere")
         {
             spriteRenderer.color = defaultcolor;
         }
@@ -63,7 +64,7 @@ public class ObjectClass : MonoBehaviour
             fantome = null;
             this.gameObject.tag = "HouseObject";
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
         {
             if (UIManager.Instance.panik <= 30)
             {
