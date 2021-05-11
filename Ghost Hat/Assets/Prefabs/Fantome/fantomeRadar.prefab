@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maison: {fileID: 0}
-  ghost: {fileID: 5356975664445928996}
   fantome: {fileID: 1463789271899118623}
   type: 1
+  speed: 200
