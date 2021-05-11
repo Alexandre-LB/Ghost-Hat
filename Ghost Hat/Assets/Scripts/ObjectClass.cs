@@ -19,7 +19,7 @@ public class ObjectClass : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(fantome);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -141,7 +141,7 @@ public class UIManager : MonoBehaviour
         if(_item == Inventory.Spiritbox)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualSpirit);
+            Destroy(actualSpirit.gameObject);
         }
         else
         {
@@ -154,7 +154,7 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Camera)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualCamera);
+            Destroy(actualCamera.gameObject);
         }
         else
         {
@@ -167,7 +167,7 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Flashlight)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualLight);
+            Destroy(actualLight.gameObject);
         }
         else
         {
@@ -180,7 +180,7 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Radar)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualRadar);
+            Destroy(actualRadar.gameObject);
         }
         else
         {
@@ -193,7 +193,7 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Cake)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualCake);
+            Destroy(actualCake.gameObject);
         }
         else
         {
