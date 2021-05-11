@@ -7,5 +7,14 @@ public class Flashlight : Item
     private void Update()
     {
         Mouse();
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            transform.Rotate(Vector3.forward * 6);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            transform.Rotate(Vector3.back * 6);
+        }
     }
 }
