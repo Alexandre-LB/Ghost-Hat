@@ -7,6 +7,10 @@ TagManager:
   - LightAura
   - HouseObject
   - vision
+  - Oreille
+  - Gateau
+  - Camera
+  - Lumiere
   layers:
   - Default
   - TransparentFX

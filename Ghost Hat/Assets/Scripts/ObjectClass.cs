@@ -41,7 +41,7 @@ public class ObjectClass : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LightAura") && gameObject.tag == "Lumiere")
+        if (collision.CompareTag("LightAura") && this.gameObject.tag == "Lumiere")
         {
             spriteRenderer.color = ghostColor;
             Debug.Log("test");
