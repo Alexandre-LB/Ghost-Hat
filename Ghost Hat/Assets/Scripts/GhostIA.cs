@@ -93,6 +93,7 @@ public class GhostIA : MonoBehaviour
     {
         visible = true;
         fantome.SetActive(true);
+        ownRoom.listObject[rand].fantome = null;
     }
 }
 public enum FantomeType

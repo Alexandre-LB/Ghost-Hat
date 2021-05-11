@@ -137,6 +137,7 @@ MonoBehaviour:
   capteur: {fileID: 3136223992136143439, guid: 6202b9a7d19ffc6449841dbf4766f892, type: 3}
   onde: {fileID: 4916162417134072670, guid: a685ac7389065b94888afcb6bcc0c333, type: 3}
   lampe: {fileID: -1352944831691118925, guid: 5987b995f3af6f44bbe5ae8553d6fd89, type: 3}
+  gateau: {fileID: 1847008767802403590, guid: 43719a2c31cbf2d448e7a5bf4f628e36, type: 3}
   cameraVert: {fileID: 5331141261635632899}
   pauseScreen: {fileID: 5984329655754960614}
 --- !u!1001 &2298669967199055045
