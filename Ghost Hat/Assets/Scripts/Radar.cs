@@ -9,7 +9,7 @@ public class Radar : Item
 
     void Start()
     {
-        this.ghostObject = GameObject.FindGameObjectWithTag("HouseObject").transform;
+        this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
     }
 
     void Update()
