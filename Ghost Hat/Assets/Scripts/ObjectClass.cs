@@ -15,6 +15,23 @@ public class ObjectClass : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultcolor = spriteRenderer.color;
         ghostColor = new Color(0, 255, 255, 100);
+
+        if (fantome != null && fantome.type == FantomeType.Gourmand)
+        {
+            this.gameObject.tag = "Gateau";
+        }
+        if (fantome != null && fantome.type == FantomeType.Oreille)
+        {
+            this.gameObject.tag = "Oreille";
+        }
+        if (fantome != null && fantome.type == FantomeType.Invisible)
+        {
+            this.gameObject.tag = "Lumiere";
+        }
+        if (fantome != null && fantome.type == FantomeType.Timide)
+        {
+            this.gameObject.tag = "Camera";
+        }
     }
 
     private void Update()
@@ -44,6 +61,7 @@ public class ObjectClass : MonoBehaviour
         {
             fantome.ActiveGhost();
             fantome = null;
+            this.gameObject.tag = "HouseObject";
         }
         else if (Input.GetMouseButton(0))
         {
