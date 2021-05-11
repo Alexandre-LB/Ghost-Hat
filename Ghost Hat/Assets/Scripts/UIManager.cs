@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
     int minUni;
     int minDiz;
 
+    public bool placed;
     public Text time;
     public Image pointeur;
     [SerializeField]
@@ -73,6 +74,7 @@ public class UIManager : MonoBehaviour
     {
         _instance = this;
         _item = Inventory.None;
+        placed = false;
         panik = 100;
         panikCountDown = 0;
         timer = 0;
@@ -207,7 +209,7 @@ public class UIManager : MonoBehaviour
             itemSlot.SetActive(true);
             cameraVert.SetActive(false);
         }
-        else
+        else if (_item != Inventory.CameraVision && placed == true)
         {
             ChangeItem(Inventory.CameraVision);
             itemSlot.SetActive(false);

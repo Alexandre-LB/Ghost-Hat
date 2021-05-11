@@ -28,6 +28,7 @@ public class CameraItem : Item
         if (Input.GetMouseButton(0) && placed == false)
         {
             move = true;
+            UIManager.Instance.placed = true;
             UIManager.Instance.ChangeItem(Inventory.None);
             UIManager.Instance.polaroid.SetActive(false);
             GameManager.Instance.CameraScreen();
@@ -54,6 +55,7 @@ public class CameraItem : Item
     {
         if (placed == true && Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
         {
+            UIManager.Instance.placed = false;
             UIManager.Instance.polaroid.SetActive(true);
             Destroy(gameObject);
         }

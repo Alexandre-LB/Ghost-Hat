@@ -23,6 +23,7 @@ public class Cake : Item
         if (Input.GetMouseButton(0) && placed == false)
         {
             move = true;
+            UIManager.Instance.cake.SetActive(false);
             UIManager.Instance.ChangeItem(Inventory.None);
             StartCoroutine(ItemActivate());
             rb2d.bodyType = RigidbodyType2D.Dynamic;
@@ -39,7 +40,7 @@ public class Cake : Item
     {
         if (placed == true && Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
         {
-            UIManager.Instance.polaroid.SetActive(true);
+            UIManager.Instance.cake.SetActive(true);
             Destroy(gameObject);
         }
     }

@@ -97,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghost: 0
   states:
-  - {fileID: 21300000, guid: b378e927ad866c24382937a5c6793820, type: 3}
-  - {fileID: 21300000, guid: 6598b66eaeda786438671b7833cca577, type: 3}
-  - {fileID: 21300000, guid: fc1251918696b684794a84adbe5b0880, type: 3}
-  - {fileID: 21300000, guid: 4768379ef1ddb7545997e5602a4a0632, type: 3}
-  - {fileID: 21300000, guid: 392dcc7b29df79a4a9f2a65e3e9bdcdb, type: 3}
+  - {fileID: 21300000, guid: d10ba79d9e90dbd4fb6a6f1fd7c157d7, type: 3}
+  - {fileID: 21300000, guid: 5c5a6ca38d391664ea4612606c22d418, type: 3}
+  - {fileID: 21300000, guid: fdfa5f5ea53833148af60789943cdbd0, type: 3}
+  - {fileID: 21300000, guid: d967ae8f1f1a8bc4781e49544be3fbe3, type: 3}
+  - {fileID: 21300000, guid: 09b8b1a2f45b63e408c178d88c3e934f, type: 3}
   spriteRenderer: {fileID: 3136223992136143436}
