@@ -9,14 +9,19 @@ public class Radar : Item
 
     void Start()
     {
-        this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
+        if (GameObject.FindGameObjectWithTag("Oreille"))
+        {
+            this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
+        }
     }
 
     void Update()
     {
         Mouse();
-
-        float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
-        anim.speed = 2 / distToPlayer;
+        if (ghostObject != null)
+        {
+            float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
+            anim.speed = 2 / distToPlayer;
+        }
     }
 }
