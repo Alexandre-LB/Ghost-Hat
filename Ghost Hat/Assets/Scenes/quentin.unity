@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
---- !u!1001 &1033196393
+--- !u!1001 &1023855546
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -471,11 +471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1426460828496368705, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.27
+      value: 4.45
       objectReference: {fileID: 0}
     - target: {fileID: 1426460828496368705, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 1426460828496368705, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -520,10 +520,6 @@ PrefabInstance:
     - target: {fileID: 4366131153155677777, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
       propertyPath: m_SortingOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7453099889410806124, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
-      propertyPath: speed
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7453099889410806124, guid: 6f0deb4762f898a4abeb7a8559c546c9, type: 3}
       propertyPath: maison

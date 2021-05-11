@@ -19,7 +19,7 @@ public class ObjectClass : MonoBehaviour
 
     private void Update()
     {
-
+        Debug.Log(fantome);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +32,7 @@ public class ObjectClass : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("LightAura") && fantome != null)
+        if (collision.CompareTag("LightAura"))
         {
             spriteRenderer.color = defaultcolor;
         }

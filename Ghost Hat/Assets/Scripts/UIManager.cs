@@ -141,7 +141,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualSpirit);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Spiritbox);
             actualSpirit = Instantiate(capteur, new Vector2(0, 0), Quaternion.identity);
@@ -154,7 +154,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualCamera);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Camera);
             actualCamera = Instantiate(trepied, new Vector3(0, 0, -2), Quaternion.identity);
@@ -167,7 +167,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualLight);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Flashlight);
             actualLight = Instantiate(lampe, new Vector2(0, 0), Quaternion.identity);
@@ -180,7 +180,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualRadar);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Radar);
             actualRadar = Instantiate(onde, new Vector2(0, 0), Quaternion.identity);
@@ -193,7 +193,7 @@ public class UIManager : MonoBehaviour
             ChangeItem(Inventory.None);
             Destroy(actualCake);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Cake);
             actualCake = Instantiate(gateau, new Vector2(0, 0), Quaternion.identity);
@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour
             itemSlot.SetActive(true);
             cameraVert.SetActive(false);
         }
-        else
+        else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.CameraVision);
             itemSlot.SetActive(false);
