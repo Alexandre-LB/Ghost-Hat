@@ -521,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 8529735065739818698, guid: 6a9f188cb5c19c545a40e12fa5fd469c, type: 3}
       propertyPath: fantome
       value: 
-      objectReference: {fileID: 5061866010542088666, guid: f9d25c24e9a99eb4885a160fcf2ef201, type: 3}
+      objectReference: {fileID: 5356975664445928996, guid: e5970abef0decfc4b81e246d50489cf0, type: 3}
     - target: {fileID: 8728832587029837857, guid: 6a9f188cb5c19c545a40e12fa5fd469c, type: 3}
       propertyPath: m_Name
       value: salon
@@ -1012,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8017943772153675909, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8017943772153675909, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1455,7 +1455,7 @@ Transform:
   m_LocalScale: {x: 1, y: 22.271975, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861652795
 GameObject:
