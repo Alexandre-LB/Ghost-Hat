@@ -15,7 +15,7 @@ public class SpiritBox : Item
 
     private void Update()
     {
-        Mouse();
+        Mouse(0, 0);
 
         if (ghost == 1)
         {

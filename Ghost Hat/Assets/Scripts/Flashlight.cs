@@ -6,7 +6,7 @@ public class Flashlight : Item
 {
     private void Update()
     {
-        Mouse();
+        Mouse(0, 0);
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {

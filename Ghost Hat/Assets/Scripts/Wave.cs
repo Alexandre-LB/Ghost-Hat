@@ -2,36 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Radar : Item
+public class Wave : Item
 {
-    public Sprite radar;
-    public Sprite radarGhost;
+    public Animator anim;
     private Transform ghostObject;
-    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         if (GameObject.FindGameObjectWithTag("Oreille"))
         {
             this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
+            Debug.Log("a");
         }
     }
 
     void Update()
     {
-        Mouse(0.05f, 0);
+        Mouse(-0.02f, 1);
         if (ghostObject != null)
         {
             float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
-
-            if (distToPlayer < 1)
-            {
-                spriteRenderer.sprite = radarGhost;
-            }
-            else
-            {
-                spriteRenderer.sprite = radar;
-            }
+            anim.speed = 2 / distToPlayer;
         }
     }
 }
