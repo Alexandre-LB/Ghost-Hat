@@ -220,12 +220,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: c6848a57002c36a44869a90fa16a603d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90704afeed27d8b4aabed1658ec60b1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2.5}
+  m_Size: {x: 1.8, y: 2.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -243,5 +243,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5304ec62de407046871079ec8627f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radar: {fileID: 21300000, guid: c6848a57002c36a44869a90fa16a603d, type: 3}
-  radarGhost: {fileID: 21300000, guid: cff4149a3f20fbe4caadefb483572a1e, type: 3}
+  radar: {fileID: 21300000, guid: 90704afeed27d8b4aabed1658ec60b1e, type: 3}
+  radarGhost: {fileID: 21300000, guid: 4d7c05b8d9afc474da44d2bad103052d, type: 3}
