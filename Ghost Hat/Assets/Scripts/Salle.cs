@@ -8,6 +8,9 @@ public class Salle : MonoBehaviour
     public HouseBehaviour maison;
     public Salle room;
     public bool cuisine;
+    public Transform position;
+    public int posX;
+    public int posY;
     [HideInInspector]
     public bool cake;
     [HideInInspector]
@@ -17,16 +20,9 @@ public class Salle : MonoBehaviour
 
     private void Update()
     {
-        if(ghostLimit.Count == 3)
+        if (ghostLimit.Count == 3)
         {
             maison.listSalle.Remove(room);
         }
     }
-}
-[Serializable]
-public class SalleData
-{
-    public Transform position;
-    public int posX;
-    public int posY;
 }
