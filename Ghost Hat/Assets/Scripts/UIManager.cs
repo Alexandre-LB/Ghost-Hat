@@ -70,6 +70,19 @@ public class UIManager : MonoBehaviour
     Cake actualCake;
     public GameObject cameraVert;
     public GameObject pauseScreen;
+
+    [HideInInspector]
+    public int gluttonyCount;
+    [HideInInspector]
+    public int shyCount;
+    [HideInInspector]
+    public int invisibleCount;
+    [HideInInspector]
+    public int earCount;
+    public Text gluttonyText;
+    public Text shyText;
+    public Text invisibleText;
+    public Text earText;
     void Awake()
     {
         _instance = this;
@@ -95,6 +108,10 @@ public class UIManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameState.Pause);
         }
+        earText.text = "= " + earCount;
+        gluttonyText.text = "= " + gluttonyCount;
+        invisibleText.text = "= " + invisibleCount;
+        shyText.text = "= " + shyCount;
     }
     void Panik()
     {

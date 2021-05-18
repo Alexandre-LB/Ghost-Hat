@@ -98,6 +98,7 @@ public class GhostIA : MonoBehaviour
     {
         maison.listFantome.Remove(this);
         ownRoom.ghostLimit.Remove(this);
+        maison.GhostNumber();
         Destroy(this.gameObject);
     }
 }
