@@ -57,7 +57,7 @@ public class ObjectClass : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (Input.GetMouseButton(0) && fantome != null && UIManager.Item == Inventory.None)
+        if (Input.GetMouseButton(0) && fantome != null && UIManager.Item == Inventory.None && !EventSystem.current.IsPointerOverGameObject())
         {
             fantome.ActiveGhost();
             fantome = null;
