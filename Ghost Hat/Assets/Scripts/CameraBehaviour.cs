@@ -13,8 +13,8 @@ public class CameraBehaviour : MonoBehaviour
 
     void Start()
     {
-        nbSalleX = house.salles.Count/2 +1;
-        nbSalleY = house.salles.Count / 2+1;
+        nbSalleX = house.listSalle.Count/2 +1;
+        nbSalleY = house.listSalle.Count / 2+1;
         tabSalle = new Transform[nbSalleX, nbSalleY];
         for (int i = 0; i < nbSalleY; i++)
         {
