@@ -16,7 +16,7 @@ public class SpiritBox : Item
 
     private void Update()
     {
-        //room = 
+        room = GameManager.Instance.room;
         Mouse(0, 0);
 
         switch (room.ghostLimit.Count)

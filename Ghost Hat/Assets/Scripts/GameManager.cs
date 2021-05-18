@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     }
     [HideInInspector]
     public bool[,] cameraRoom;
+    [HideInInspector]
+    public Salle room;
     private void Awake()
     {
         this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
