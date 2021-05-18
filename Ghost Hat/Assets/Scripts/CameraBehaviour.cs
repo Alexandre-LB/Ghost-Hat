@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
@@ -13,8 +14,8 @@ public class CameraBehaviour : MonoBehaviour
 
     void Start()
     {
-        nbSalleX = house.listSalle.Count/2 +1;
-        nbSalleY = house.listSalle.Count / 2+1;
+        nbSalleX = house.x/2 +1;
+        nbSalleY = house.y / 2+1 ;
         tabSalle = new Transform[nbSalleX, nbSalleY];
         for (int i = 0; i < nbSalleY; i++)
         {
@@ -63,9 +64,12 @@ public class CameraBehaviour : MonoBehaviour
                 currentX--;
             }
         }
-
-        Debug.Log(nbSalleX);
-        Debug.Log(nbSalleY);
+        if (tabSalle[currentX, currentY] != null)
+        {
+            Camera.main.transform.position = Vector2.Lerp(transform.position, tabSalle[currentX, currentY].position, 5*Time.deltaTime);
+            Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        }
+        GameManager.Instance.room = house.salle[currentX,currentY];
 
         IEnumerator Moving()
         {

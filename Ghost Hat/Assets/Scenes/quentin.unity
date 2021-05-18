@@ -214,6 +214,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
+      propertyPath: x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
+      propertyPath: y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: tabX
       value: 1
       objectReference: {fileID: 0}
@@ -236,11 +244,11 @@ PrefabInstance:
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: listSalle.Array.data[0]
       value: 
-      objectReference: {fileID: 216683240}
+      objectReference: {fileID: 712032404}
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: listSalle.Array.data[1]
       value: 
-      objectReference: {fileID: 712032404}
+      objectReference: {fileID: 216683240}
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: listFantome.Array.data[0]
       value: 
@@ -546,9 +554,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: posX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: maison
       value: 
       objectReference: {fileID: 155387208}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: position
+      value: 
+      objectReference: {fileID: 622715574}
     - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: listObject.Array.size
       value: 2
@@ -592,6 +608,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2586548180753272372, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
+      propertyPath: position
+      value: 
+      objectReference: {fileID: 712032405}
     - target: {fileID: 4089642559032844302, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
       propertyPath: m_RootOrder
       value: 7

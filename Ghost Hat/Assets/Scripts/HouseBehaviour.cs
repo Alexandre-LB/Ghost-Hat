@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class HouseBehaviour : MonoBehaviour
 {
+    public int x;
+    public int y;
+    int compteur;
+    public Salle[,] salle;
     public List<Salle> listSalle = new List<Salle>();
     public List<GhostIA> listFantome = new List<GhostIA>();
     int oreille;
@@ -13,6 +17,16 @@ public class HouseBehaviour : MonoBehaviour
 
     void Start()
     {
+        compteur = 0;
+        salle = new Salle[x, y];
+        for(int i = 0; i < x; i++)
+        {
+            for(int j = 0; j < y; j++)
+            {
+                salle[i, j] = listSalle[compteur];
+                compteur++;
+            }
+        }
         GhostNumber();
     }
     public void GhostNumber()
