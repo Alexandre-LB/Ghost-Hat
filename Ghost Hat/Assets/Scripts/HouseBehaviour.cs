@@ -6,7 +6,6 @@ public class HouseBehaviour : MonoBehaviour
 {
     public List<Salle> listSalle = new List<Salle>();
     public List<GhostIA> listFantome = new List<GhostIA>();
-    public List<SalleData> salles = new List<SalleData>();
     int oreille;
     int gateau;
     int timide;
