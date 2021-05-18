@@ -21,6 +21,7 @@ public class Cake : Item
             UIManager.Instance.cake.SetActive(false);
             UIManager.Instance.ChangeItem(Inventory.None);
             placed = true;
+            GameManager.Instance.room.cake = true;
             rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
     }
@@ -31,6 +32,7 @@ public class Cake : Item
         {
             UIManager.Instance.cake.SetActive(true);
             Destroy(gameObject);
+            GameManager.Instance.room.cake = false;
         }
     }
 }

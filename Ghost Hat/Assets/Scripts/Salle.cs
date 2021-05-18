@@ -12,6 +12,8 @@ public class Salle : MonoBehaviour
     public int posX;
     public int posY;
     [HideInInspector]
+    public bool cameraStand;
+    [HideInInspector]
     public bool cake;
     [HideInInspector]
     public bool gourmand;

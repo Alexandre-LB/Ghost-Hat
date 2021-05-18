@@ -15,17 +15,24 @@ public class HouseBehaviour : MonoBehaviour
     int timide;
     int lumiere;
 
-    void Start()
+    void Awake()
     {
         compteur = 0;
         salle = new Salle[x, y];
-        for(int i = 0; i < x; i++)
+        for (int i = 0; i < x; i++)
         {
-            for(int j = 0; j < y; j++)
+            for (int j = 0; j < y; j++)
             {
                 salle[i, j] = listSalle[compteur];
                 compteur++;
             }
+        }
+    }
+    void Start()
+    {
+        for(int i = 0; i < listFantome.Count; i++)
+        {
+            listFantome[i].ChooseObject();
         }
         GhostNumber();
     }
