@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public enum Inventory
 {
     None,
@@ -83,6 +84,7 @@ public class UIManager : MonoBehaviour
     public Text shyText;
     public Text invisibleText;
     public Text earText;
+    public EventSystem EventSystem;
     void Awake()
     {
         _instance = this;

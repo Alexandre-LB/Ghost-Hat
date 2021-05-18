@@ -136,7 +136,7 @@ MonoBehaviour:
   polaroid: {fileID: 8182155356186915416}
   trepied: {fileID: 2104270586215168394, guid: c4d988762c184e3418c9ca04001bc633, type: 3}
   capteur: {fileID: 3136223992136143439, guid: 6202b9a7d19ffc6449841dbf4766f892, type: 3}
-  onde: {fileID: 4916162417134072670, guid: a685ac7389065b94888afcb6bcc0c333, type: 3}
+  onde: {fileID: 7523058085939008322, guid: 67f877178f0d478459df41645c67dc9d, type: 3}
   lampe: {fileID: -1352944831691118925, guid: 5987b995f3af6f44bbe5ae8553d6fd89, type: 3}
   gateau: {fileID: 1847008767802403590, guid: 43719a2c31cbf2d448e7a5bf4f628e36, type: 3}
   cameraVert: {fileID: 5331141261635632899}

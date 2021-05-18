@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ObjectClass : MonoBehaviour
 {
-    //[HideInInspector]
+    [HideInInspector]
     public GhostIA fantome;
     SpriteRenderer spriteRenderer;
     Color defaultcolor;
@@ -54,7 +55,6 @@ public class ObjectClass : MonoBehaviour
             spriteRenderer.color = defaultcolor;
         }
     }
-
     private void OnMouseDown()
     {
         if (Input.GetMouseButton(0) && fantome != null && UIManager.Item == Inventory.None)
@@ -63,7 +63,7 @@ public class ObjectClass : MonoBehaviour
             fantome = null;
             this.gameObject.tag = "HouseObject";
         }
-        else if (Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
+        else if (Input.GetMouseButton(0) && UIManager.Item == Inventory.None && !EventSystem.current.IsPointerOverGameObject())
         {
             if (UIManager.Instance.panik <= 30)
             {
