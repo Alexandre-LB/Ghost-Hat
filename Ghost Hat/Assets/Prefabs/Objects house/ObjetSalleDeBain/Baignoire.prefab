@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1447489434060494273}
   - component: {fileID: 5396314671905859901}
   - component: {fileID: -8600451673903275945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Baignoire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

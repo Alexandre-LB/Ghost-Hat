@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9124752519407526530}
   - component: {fileID: 6530598625687818757}
   - component: {fileID: -1280377013835080006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Gazini\xE8re"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

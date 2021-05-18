@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7581170399955766120}
   - component: {fileID: 3707577873812496005}
   - component: {fileID: 8966185222029218030}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Velo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

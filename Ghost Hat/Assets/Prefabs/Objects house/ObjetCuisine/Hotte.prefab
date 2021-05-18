@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1670847460275953316}
   - component: {fileID: 2899128409109949099}
   - component: {fileID: -1995789774705461006}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hotte
   m_TagString: Untagged
   m_Icon: {fileID: 0}

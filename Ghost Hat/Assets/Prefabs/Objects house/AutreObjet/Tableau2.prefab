@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3949314908946488122}
   - component: {fileID: 3848479788364602385}
   - component: {fileID: -4124659016513626698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tableau2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

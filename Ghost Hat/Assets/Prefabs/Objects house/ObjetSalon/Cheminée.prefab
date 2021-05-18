@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9002226663183419965}
   - component: {fileID: 9002226663183419966}
   - component: {fileID: -2259875254878105499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Chemin\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

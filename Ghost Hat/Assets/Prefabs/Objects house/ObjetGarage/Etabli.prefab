@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 410783004937091965}
   - component: {fileID: 8418032288068967133}
   - component: {fileID: 7653597878261555119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Etabli
   m_TagString: Untagged
   m_Icon: {fileID: 0}

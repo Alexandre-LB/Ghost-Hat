@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6615753243208313651}
   - component: {fileID: 2263100699774847513}
   - component: {fileID: -5810375700612520680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bol
   m_TagString: Untagged
   m_Icon: {fileID: 0}

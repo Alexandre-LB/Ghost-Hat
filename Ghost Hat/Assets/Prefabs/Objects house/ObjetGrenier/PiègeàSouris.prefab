@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3702104002695162786}
   - component: {fileID: 3564015028506710912}
   - component: {fileID: 5952025996876649461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Pi\xE8ge\xE0Souris"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6110533944653663527}
   - component: {fileID: 6110533944653663526}
   - component: {fileID: -53657579301528451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Telephone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
