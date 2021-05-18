@@ -62,8 +62,8 @@ public class UIManager : MonoBehaviour
     CameraItem actualCamera;
     public SpiritBox capteur;
     SpiritBox actualSpirit;
-    public Radar onde;
-    Radar actualRadar;
+    public GameObject onde;
+    GameObject actualRadar;
     public Flashlight lampe;
     Flashlight actualLight;
     public Cake gateau;
@@ -197,7 +197,7 @@ public class UIManager : MonoBehaviour
         if (_item == Inventory.Radar)
         {
             ChangeItem(Inventory.None);
-            Destroy(actualRadar.gameObject);
+            Destroy(actualRadar);
         }
         else if (_item == Inventory.None)
         {
