@@ -5,10 +5,12 @@ public class GhostIA : MonoBehaviour
 {
     public HouseBehaviour maison;
     public GameObject fantome;
+    public GameObject gateau;
     public FantomeType type;
     public int speed;
     Vector2 newPos;
-    bool visible;
+    [HideInInspector]
+    public bool visible;
     Salle ownRoom;
     int rand;
     Rigidbody2D rb;
@@ -70,7 +72,7 @@ public class GhostIA : MonoBehaviour
     public void ChooseObject()
     {
         ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
-        if(type == FantomeType.Gourmand && ownRoom.cuisine || type == FantomeType.Gourmand && ownRoom.gourmand)
+        if(type == FantomeType.Gourmand && ownRoom.cuisine || type == FantomeType.Gourmand && ownRoom.gourmand != null)
         {
             ChooseObject();
         }
@@ -83,7 +85,7 @@ public class GhostIA : MonoBehaviour
             ownRoom.listObject.RemoveAt(rand);
             if(type == FantomeType.Gourmand)
             {
-                ownRoom.gourmand = true;
+                ownRoom.gourmand = this;
             }
             fantome.SetActive(false);
         }
@@ -99,6 +101,12 @@ public class GhostIA : MonoBehaviour
         ownRoom.ghostLimit.Remove(this);
         maison.GhostNumber();
         Destroy(this.gameObject);
+    }
+
+    public void Manger()
+    {
+        fantome.SetActive(true);
+        fantome.transform.position = Vector2.Lerp(transform.position, gateau.transform.position, Time.deltaTime);
     }
 }
 public enum FantomeType

@@ -35,4 +35,12 @@ public class Cake : Item
             GameManager.Instance.room.cake = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if( collision.tag == "Gateau")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

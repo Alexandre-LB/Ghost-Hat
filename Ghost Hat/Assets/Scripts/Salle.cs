@@ -16,7 +16,7 @@ public class Salle : MonoBehaviour
     [HideInInspector]
     public bool cake;
     [HideInInspector]
-    public bool gourmand;
+    public GhostIA gourmand;
     public List<ObjectClass> listObject = new List<ObjectClass>();
     public List<GhostIA> ghostLimit = new List<GhostIA>();
 
@@ -25,6 +25,11 @@ public class Salle : MonoBehaviour
         if (ghostLimit.Count == 3)
         {
             maison.listSalle.Remove(room);
+        }
+
+        if(cake && gourmand != null)
+        {
+            Invoke("gourmand.Manger()",5);
         }
     }
 }

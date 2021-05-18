@@ -51,8 +51,13 @@ MonoBehaviour:
   maison: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
   room: {fileID: -1898179058919985472}
   cuisine: 0
+  cake: 0
   gourmand: 0
-  listObject: []
+  listObject:
+  - {fileID: 7595484964501744155}
+  - {fileID: 4207122819984652980}
+  - {fileID: 2062932199169148235}
+  - {fileID: 2221310626713936891}
   ghostLimit: []
 --- !u!1 &1643155934329428999
 GameObject:
