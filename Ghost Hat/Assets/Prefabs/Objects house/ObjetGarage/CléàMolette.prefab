@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6976891641469747413}
   - component: {fileID: 9216899698244531271}
   - component: {fileID: 5988460740622755738}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Cl\xE9\xE0Molette"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

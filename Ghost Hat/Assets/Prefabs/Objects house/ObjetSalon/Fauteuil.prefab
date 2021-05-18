@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8123436836145927794}
   - component: {fileID: 8123436836145927793}
   - component: {fileID: -5960121558103824526}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fauteuil
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4670866818444425914}
   - component: {fileID: 106470292093617954}
   - component: {fileID: 509360426831498311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: table_de_chevet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

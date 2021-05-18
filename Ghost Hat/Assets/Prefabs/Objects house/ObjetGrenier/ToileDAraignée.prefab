@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8526467662647494199}
   - component: {fileID: 2818511530609731921}
   - component: {fileID: 4067458683389456244}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "ToileDAraign\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

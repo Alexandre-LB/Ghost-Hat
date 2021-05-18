@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2110746154553881751}
   - component: {fileID: 8206594828317735991}
   - component: {fileID: 6309559037789251491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Frigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

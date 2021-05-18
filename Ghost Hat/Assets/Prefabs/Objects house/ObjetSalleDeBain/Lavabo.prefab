@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3051104108490098498}
   - component: {fileID: 3758652995606281234}
   - component: {fileID: 152205225518213038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lavabo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

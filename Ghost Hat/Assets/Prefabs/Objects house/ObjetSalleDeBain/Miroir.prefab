@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 672144373156121290}
   - component: {fileID: 8421855594764258164}
   - component: {fileID: -1989901855693280321}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Miroir
   m_TagString: Untagged
   m_Icon: {fileID: 0}

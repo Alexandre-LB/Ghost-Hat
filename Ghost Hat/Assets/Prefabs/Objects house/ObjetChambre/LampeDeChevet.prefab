@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5005189461798309923}
   - component: {fileID: 2152310794504667217}
   - component: {fileID: 7915225285280509172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LampeDeChevet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

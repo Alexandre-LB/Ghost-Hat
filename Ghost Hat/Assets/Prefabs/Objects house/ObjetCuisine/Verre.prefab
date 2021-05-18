@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5435012699470589279}
   - component: {fileID: 6769013738539915138}
   - component: {fileID: -85487785678002898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Verre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

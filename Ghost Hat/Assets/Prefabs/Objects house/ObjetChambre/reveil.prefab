@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1968994201040738693}
   - component: {fileID: 7187214200244473254}
   - component: {fileID: 2933209717640952681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: reveil
   m_TagString: Untagged
   m_Icon: {fileID: 0}

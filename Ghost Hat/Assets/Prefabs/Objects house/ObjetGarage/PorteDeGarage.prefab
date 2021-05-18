@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3952450187078147659}
   - component: {fileID: 8876505545624593231}
   - component: {fileID: 8533588698109280743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PorteDeGarage
   m_TagString: Untagged
   m_Icon: {fileID: 0}

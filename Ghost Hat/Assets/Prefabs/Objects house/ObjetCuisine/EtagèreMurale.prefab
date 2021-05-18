@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1324526053338029658}
   - component: {fileID: 97606903468999612}
   - component: {fileID: 3274020982440591697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "Etag\xE8reMurale"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
