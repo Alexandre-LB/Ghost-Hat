@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
     public GameObject victoryScreen;
     public GameObject star2;
     public GameObject star3;
+    public Text score;
     public GameObject cameraScreen;
 
     [HideInInspector]
@@ -271,6 +272,7 @@ public class UIManager : MonoBehaviour
         creditScreen.SetActive(false);
         levelScreen.SetActive(false);
         gameScreen.SetActive(false);
+        deathScreen.SetActive(false);
         titleSceen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.MainMenu);
         if (SceneManager.GetActiveScene().buildIndex != 1)
