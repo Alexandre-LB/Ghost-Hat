@@ -27,13 +27,13 @@ public class HouseBehaviour : MonoBehaviour
                 compteur++;
             }
         }
-    }
-    void Start()
-    {
-        for(int i = 0; i < listFantome.Count; i++)
+        for (int i = 0; i < listFantome.Count; i++)
         {
             listFantome[i].ChooseObject();
         }
+    }
+    void Start()
+    {
         GhostNumber();
     }
     public void GhostNumber()

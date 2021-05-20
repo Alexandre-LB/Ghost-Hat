@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class ObjectClass : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public GhostIA fantome;
     SpriteRenderer spriteRenderer;
     Color defaultcolor;
@@ -19,19 +19,19 @@ public class ObjectClass : MonoBehaviour
 
         if (fantome != null && fantome.type == FantomeType.Gourmand)
         {
-            this.gameObject.tag = "Gateau";
+            tag = "Gateau";
         }
         if (fantome != null && fantome.type == FantomeType.Oreille)
         {
-            this.gameObject.tag = "Oreille";
+            tag = "Oreille";
         }
         if (fantome != null && fantome.type == FantomeType.Invisible)
         {
-            this.gameObject.tag = "Lumiere";
+            tag = "Lumiere";
         }
         if (fantome != null && fantome.type == FantomeType.Timide)
         {
-            this.gameObject.tag = "Camera";
+            tag = "Camera";
         }
     }
 
@@ -61,7 +61,7 @@ public class ObjectClass : MonoBehaviour
         {
             fantome.ActiveGhost();
             fantome = null;
-            this.gameObject.tag = "HouseObject";
+            tag = "HouseObject";
         }
         else if (Input.GetMouseButton(0) && UIManager.Item == Inventory.None && !EventSystem.current.IsPointerOverGameObject())
         {
