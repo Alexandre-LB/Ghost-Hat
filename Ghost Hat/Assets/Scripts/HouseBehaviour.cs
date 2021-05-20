@@ -14,6 +14,7 @@ public class HouseBehaviour : MonoBehaviour
     int gateau;
     int timide;
     int lumiere;
+    float score;
 
     void Awake()
     {
@@ -40,16 +41,18 @@ public class HouseBehaviour : MonoBehaviour
     {
         if (listFantome.Count == 0)
         {
+            score = UIManager.Instance.tictac * UIManager.Instance.panik;
             GameManager.Instance.ChangeState(GameState.MainMenu);
             UIManager.Instance.victoryScreen.SetActive(true);
-            if(UIManager.Instance.tictac * UIManager.Instance.panik >= 10000)
+            if(score >= 10000)
             {
                 UIManager.Instance.star2.SetActive(true);
-                if(UIManager.Instance.tictac * UIManager.Instance.panik >= 20000)
+                if(score >= 20000)
                 {
                     UIManager.Instance.star3.SetActive(true);
                 }
             }
+            UIManager.Instance.score.text = (int)score + " points";
         }
     }
     public void GhostNumber()
