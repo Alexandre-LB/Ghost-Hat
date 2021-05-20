@@ -5,7 +5,6 @@ public class GhostIA : MonoBehaviour
 {
     public HouseBehaviour maison;
     public GameObject fantome;
-    public GameObject gateau;
     public FantomeType type;
     public int speed;
     Vector2 newPos;
@@ -14,6 +13,7 @@ public class GhostIA : MonoBehaviour
     Salle ownRoom;
     int rand;
     Rigidbody2D rb;
+    bool rushCake;
     float moveTimer = 0;
     private void Awake()
     {
@@ -23,6 +23,10 @@ public class GhostIA : MonoBehaviour
     void Update()
     {
         moveTimer += Time.deltaTime;
+        if (rushCake)
+        {
+            fantome.transform.position = Vector2.Lerp(transform.position, ownRoom.gateau.transform.position, Time.deltaTime);
+        }
         if (visible && moveTimer > 1)
         {
             if (transform.position.x < ownRoom.transform.position.x - 4 && transform.position.y < ownRoom.transform.position.y - 2)
@@ -78,7 +82,7 @@ public class GhostIA : MonoBehaviour
         }
         else
         {
-            ownRoom.ghostLimit.Add(this);
+            ownRoom.ghostList.Add(this);
             rand = Random.Range(0, ownRoom.listObject.Count);
             ownRoom.listObject[rand].fantome = this;
             transform.position = ownRoom.listObject[rand].transform.position;
@@ -98,7 +102,7 @@ public class GhostIA : MonoBehaviour
     private void OnMouseDown()
     {
         maison.listFantome.Remove(this);
-        ownRoom.ghostLimit.Remove(this);
+        ownRoom.ghostList.Remove(this);
         maison.GhostNumber();
         Destroy(this.gameObject);
     }
@@ -106,7 +110,17 @@ public class GhostIA : MonoBehaviour
     public void Manger()
     {
         fantome.SetActive(true);
-        fantome.transform.position = Vector2.Lerp(transform.position, gateau.transform.position, Time.deltaTime);
+        ownRoom.gourmand = null;
+        rushCake = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Cake" && tag == "Gateau")
+        {
+            Destroy(collision.gameObject);
+            rushCake = false;
+            visible = true;
+        }
     }
 }
 public enum FantomeType
