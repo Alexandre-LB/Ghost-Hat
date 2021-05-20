@@ -40,6 +40,7 @@ public class UIManager : MonoBehaviour
     public GameObject victoryScreen;
     public GameObject star2;
     public GameObject star3;
+    public Text score;
     public GameObject cameraScreen;
 
     [HideInInspector]
@@ -51,6 +52,8 @@ public class UIManager : MonoBehaviour
     int hour;
     int minUni;
     int minDiz;
+    [HideInInspector]
+    public float tictac = 300;
 
     public bool placed;
     public Text time;
@@ -110,6 +113,11 @@ public class UIManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameState.Pause);
         }
+        if (panik == 0 || tictac == 0)
+        {
+            GameManager.Instance.ChangeState(GameState.MainMenu);
+            deathScreen.SetActive(true);
+        }
         earText.text = "= " + earCount;
         gluttonyText.text = "= " + gluttonyCount;
         invisibleText.text = "= " + invisibleCount;
@@ -127,6 +135,7 @@ public class UIManager : MonoBehaviour
     }
     void TimeCount()
     {
+        tictac -= Time.deltaTime;
         timer += Time.deltaTime;
         if (timer > 1 && hour != 0)
         {
@@ -263,6 +272,7 @@ public class UIManager : MonoBehaviour
         creditScreen.SetActive(false);
         levelScreen.SetActive(false);
         gameScreen.SetActive(false);
+        deathScreen.SetActive(false);
         titleSceen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.MainMenu);
         if (SceneManager.GetActiveScene().buildIndex != 1)

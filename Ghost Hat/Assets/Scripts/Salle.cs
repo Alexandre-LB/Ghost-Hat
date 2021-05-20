@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Salle : MonoBehaviour
 {
+    float timerCake = 0;
     public HouseBehaviour maison;
     public Salle room;
     public bool cuisine;
@@ -14,22 +15,34 @@ public class Salle : MonoBehaviour
     [HideInInspector]
     public bool cameraStand;
     [HideInInspector]
-    public bool cake;
+    public Cake gateau;
     [HideInInspector]
+    public bool lumiere;
     public GhostIA gourmand;
+    public GhostIA timide;
     public List<ObjectClass> listObject = new List<ObjectClass>();
-    public List<GhostIA> ghostLimit = new List<GhostIA>();
+    [HideInInspector]
+    public List<GhostIA> ghostList = new List<GhostIA>();
 
     private void Update()
     {
-        if (ghostLimit.Count == 3)
+        if (ghostList.Count == 3)
         {
             maison.listSalle.Remove(room);
         }
 
-        if(cake && gourmand != null)
+        if(gateau != null && gourmand != null)
         {
-            Invoke("gourmand.Manger()",5);
+            timerCake += Time.deltaTime;
+            if (timerCake > 5.0f)
+            {
+                gourmand.Manger();
+            }
+        }
+
+        if(lumiere == false && cameraStand == true)
+        {
+            timide.Apparait();
         }
     }
 }

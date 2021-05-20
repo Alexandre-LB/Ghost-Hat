@@ -95,7 +95,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2978c913a42c5f44ea541622f93ba10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maison: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
+  maison: {fileID: 0}
   room: {fileID: 6252836607005035292}
+  cuisine: 0
+  position: {fileID: 0}
+  posX: 0
+  posY: 0
+  cameraStand: 0
+  gateau: {fileID: 0}
+  gourmand: {fileID: 0}
   listObject: []
-  ghostLimit: []
+  ghostList: []

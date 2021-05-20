@@ -57,13 +57,13 @@ public class ObjectClass : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (Input.GetMouseButton(0) && fantome != null && UIManager.Item == Inventory.None && !EventSystem.current.IsPointerOverGameObject())
+        if (!EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButton(0) && fantome != null && fantome.type != FantomeType.Gourmand && UIManager.Item == Inventory.None)
         {
             fantome.ActiveGhost();
             fantome = null;
             tag = "HouseObject";
         }
-        else if (Input.GetMouseButton(0) && UIManager.Item == Inventory.None && !EventSystem.current.IsPointerOverGameObject())
+        else if (!EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
         {
             if (UIManager.Instance.panik <= 30)
             {

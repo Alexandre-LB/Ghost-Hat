@@ -19,7 +19,7 @@ public class SpiritBox : Item
         room = GameManager.Instance.room;
         Mouse(0, 0);
 
-        switch (room.ghostLimit.Count)
+        switch (room.ghostList.Count)
         {
             case 1:
                 spriteRenderer.sprite = states[1];

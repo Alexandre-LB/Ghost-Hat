@@ -21,7 +21,7 @@ public class Cake : Item
             UIManager.Instance.cake.SetActive(false);
             UIManager.Instance.ChangeItem(Inventory.None);
             placed = true;
-            GameManager.Instance.room.cake = true;
+            GameManager.Instance.room.gateau = this;
             rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
     }
@@ -32,15 +32,7 @@ public class Cake : Item
         {
             UIManager.Instance.cake.SetActive(true);
             Destroy(gameObject);
-            GameManager.Instance.room.cake = false;
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if( collision.tag == "Gateau")
-        {
-            Destroy(gameObject);
+            GameManager.Instance.room.gateau = null;
         }
     }
 }
