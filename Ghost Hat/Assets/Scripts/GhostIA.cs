@@ -113,6 +113,19 @@ public class GhostIA : MonoBehaviour
         ownRoom.gourmand = null;
         rushCake = true;
     }
+
+    public void Apparait()
+    {
+        if (ownRoom != GameManager.Instance.room)
+        {
+            fantome.SetActive(true);
+        }
+        else
+        {
+            fantome.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Cake" && tag == "Gateau")
