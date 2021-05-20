@@ -712,7 +712,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6ca35e647eefd46479801007cc16455e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -720,7 +720,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-6326034806038841137
@@ -743,7 +743,9 @@ MonoBehaviour:
   posY: 0
   cameraStand: 0
   gateau: {fileID: 0}
+  lumiere: 0
   gourmand: {fileID: 0}
+  timide: {fileID: 0}
   listObject:
   - {fileID: 7361172117227506027}
   - {fileID: 3107928893457272738}
