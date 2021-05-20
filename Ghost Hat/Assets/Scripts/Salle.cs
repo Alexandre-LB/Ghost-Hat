@@ -6,7 +6,6 @@ using UnityEngine;
 public class Salle : MonoBehaviour
 {
     float timerCake = 0;
-    [HideInInspector]
     public HouseBehaviour maison;
     public Salle room;
     public bool cuisine;

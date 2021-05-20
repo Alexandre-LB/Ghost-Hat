@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class GhostIA : MonoBehaviour
 {
-    [HideInInspector]
     public HouseBehaviour maison;
     public GameObject fantome;
     public FantomeType type;

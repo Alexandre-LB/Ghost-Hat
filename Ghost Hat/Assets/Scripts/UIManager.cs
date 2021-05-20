@@ -107,7 +107,10 @@ public class UIManager : MonoBehaviour
         if(GameManager.State == GameState.Game)
         {
             TimeCount();
-            Panik();
+            if (!GameManager.Instance.room.lumiere)
+            {
+                Panik();
+            }
         }
         if (Input.GetKeyDown("p"))
         {
