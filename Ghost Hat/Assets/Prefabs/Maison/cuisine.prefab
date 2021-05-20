@@ -224,7 +224,9 @@ MonoBehaviour:
   posY: 0
   cameraStand: 0
   gateau: {fileID: 0}
+  lumiere: 0
   gourmand: {fileID: 0}
+  timide: {fileID: 0}
   listObject:
   - {fileID: 6329692939609558695}
   - {fileID: 6779084383891732692}
@@ -920,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 76822415555510576, guid: 304b047270908934abd205a4dc9af8e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.41
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 76822415555510576, guid: 304b047270908934abd205a4dc9af8e7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1355,7 +1357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223872519446082836, guid: 3cc93867d75c5894d84bdfb502edf471, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2276881436125282477, guid: 3cc93867d75c5894d84bdfb502edf471, type: 3}
       propertyPath: m_RootOrder
