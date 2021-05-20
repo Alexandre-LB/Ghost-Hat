@@ -18,13 +18,12 @@ public class CameraItem : Item
         this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (move == false)
         {
             Mouse(0, 0);
         }
-        
         if (Input.GetMouseButton(0) && placed == false)
         {
             move = true;
