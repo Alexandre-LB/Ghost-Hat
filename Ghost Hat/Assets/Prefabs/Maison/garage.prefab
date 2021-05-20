@@ -176,13 +176,15 @@ MonoBehaviour:
   posY: 0
   cameraStand: 0
   gateau: {fileID: 0}
+  lumiere: 0
   gourmand: {fileID: 0}
+  timide: {fileID: 0}
   listObject:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4127788275142803836}
+  - {fileID: 2500626940848210637}
+  - {fileID: 3486179707553532890}
+  - {fileID: 4204533361731703299}
+  - {fileID: 6985716090401128582}
   ghostList: []
 --- !u!114 &4127788275142803836
 MonoBehaviour:
