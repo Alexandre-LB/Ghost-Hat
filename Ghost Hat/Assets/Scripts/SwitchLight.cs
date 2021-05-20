@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchLight : MonoBehaviour
 {
     public GameObject LightOff;
+    public Salle salle;
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +24,12 @@ public class SwitchLight : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && LightOff.activeSelf)
         {
             LightOff.SetActive(false);
+            salle.lumiere = true;
         }
         else if (Input.GetMouseButtonUp(0) && !LightOff.activeSelf)
         {
             LightOff.SetActive(true);
+            salle.lumiere = false;
         }
     }
 }

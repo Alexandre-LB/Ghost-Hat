@@ -16,8 +16,10 @@ public class Salle : MonoBehaviour
     public bool cameraStand;
     [HideInInspector]
     public Cake gateau;
-    //[HideInInspector]
+    [HideInInspector]
+    public bool lumiere;
     public GhostIA gourmand;
+    public GhostIA timide;
     public List<ObjectClass> listObject = new List<ObjectClass>();
     [HideInInspector]
     public List<GhostIA> ghostList = new List<GhostIA>();
@@ -36,6 +38,11 @@ public class Salle : MonoBehaviour
             {
                 gourmand.Manger();
             }
+        }
+
+        if(lumiere == false && cameraStand == true)
+        {
+            timide.Apparait();
         }
     }
 }
