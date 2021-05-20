@@ -51,6 +51,8 @@ public class UIManager : MonoBehaviour
     int hour;
     int minUni;
     int minDiz;
+    [HideInInspector]
+    public float tictac = 300;
 
     public bool placed;
     public Text time;
@@ -110,6 +112,11 @@ public class UIManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameState.Pause);
         }
+        if (panik == 0 || tictac == 0)
+        {
+            GameManager.Instance.ChangeState(GameState.MainMenu);
+            deathScreen.SetActive(true);
+        }
         earText.text = "= " + earCount;
         gluttonyText.text = "= " + gluttonyCount;
         invisibleText.text = "= " + invisibleCount;
@@ -127,6 +134,7 @@ public class UIManager : MonoBehaviour
     }
     void TimeCount()
     {
+        tictac -= Time.deltaTime;
         timer += Time.deltaTime;
         if (timer > 1 && hour != 0)
         {

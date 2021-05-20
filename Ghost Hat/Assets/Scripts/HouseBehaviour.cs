@@ -36,6 +36,22 @@ public class HouseBehaviour : MonoBehaviour
     {
         GhostNumber();
     }
+    void Update()
+    {
+        if (listFantome.Count == 0)
+        {
+            GameManager.Instance.ChangeState(GameState.MainMenu);
+            UIManager.Instance.victoryScreen.SetActive(true);
+            if(UIManager.Instance.tictac * UIManager.Instance.panik >= 10000)
+            {
+                UIManager.Instance.star2.SetActive(true);
+                if(UIManager.Instance.tictac * UIManager.Instance.panik >= 20000)
+                {
+                    UIManager.Instance.star3.SetActive(true);
+                }
+            }
+        }
+    }
     public void GhostNumber()
     {
         oreille = 0;
