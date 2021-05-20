@@ -5,19 +5,38 @@ using UnityEngine;
 public class Wave : Item
 {
     public Animator anim;
-    private Transform ghostObject;
+    public HouseBehaviour houseObject;
+    private float ghostTarget;
+    private Vector3 ghostPos;
+    private float distToPlayer;
 
-    void Update()
+    private void Start()
+    {
+        this.houseObject = HouseBehaviour.FindObjectOfType<HouseBehaviour>();
+    }
+
+    void FixedUpdate()
     {
         Mouse(-0.02f, 1);
-        if (GameObject.FindGameObjectWithTag("Oreille"))
+        ghostTarget = distToPlayer;
+        for (int i = 0; i < houseObject.listFantome.Count; i++)
         {
-            this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
+            if (houseObject.listFantome[i].tag == GameObject.FindGameObjectWithTag("Oreille").tag)
+            {
+                distToPlayer = Vector2.Distance(transform.position, houseObject.listFantome[i].transform.position);
+                if (distToPlayer < ghostTarget)
+                {
+                    ghostTarget = Vector2.Distance(transform.position, houseObject.listFantome[i].transform.position);
+                }
+            }
         }
-        if (ghostObject != null)
+        if (ghostTarget > 9)
         {
-            float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
-            anim.speed = 2 / distToPlayer;
+            anim.speed = 0.5f;
+        }
+        else
+        {
+            anim.speed = 3 - Mathf.Sqrt(ghostTarget);
         }
     }
 }

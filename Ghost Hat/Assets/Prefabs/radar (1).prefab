@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 7523058085266279515}
+  houseObject: {fileID: 0}
 --- !u!1 &7523058085939008322
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,9 +128,10 @@ GameObject:
   - component: {fileID: 7523058085939008321}
   - component: {fileID: 7523058085939008320}
   - component: {fileID: 7523058085939008323}
+  - component: {fileID: 995243436692002388}
   m_Layer: 0
   m_Name: radar (1)
-  m_TagString: Untagged
+  m_TagString: Radar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -215,3 +217,19 @@ MonoBehaviour:
   radar: {fileID: 21300000, guid: 90704afeed27d8b4aabed1658ec60b1e, type: 3}
   radarGhost: {fileID: 21300000, guid: 4d7c05b8d9afc474da44d2bad103052d, type: 3}
   spriteRenderer: {fileID: 7523058085939008320}
+--- !u!58 &995243436692002388
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523058085939008322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04922439, y: 0.9800124}
+  serializedVersion: 2
+  m_Radius: 0.17576315

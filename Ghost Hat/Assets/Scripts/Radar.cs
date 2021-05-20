@@ -16,14 +16,22 @@ public class Radar : Item
         {
             this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
             float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
-            if (distToPlayer < 1)
-            {
-                spriteRenderer.sprite = radarGhost;
-            }
-            else
-            {
-                spriteRenderer.sprite = radar;
-            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Oreille"))
+        {
+            spriteRenderer.sprite = radarGhost;
+        }
+    } 
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Oreille"))
+        {
+            spriteRenderer.sprite = radar;
         }
     }
 }

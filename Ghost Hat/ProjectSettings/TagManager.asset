@@ -11,6 +11,7 @@ TagManager:
   - Gateau
   - Camera
   - Lumiere
+  - House
   layers:
   - Default
   - TransparentFX
