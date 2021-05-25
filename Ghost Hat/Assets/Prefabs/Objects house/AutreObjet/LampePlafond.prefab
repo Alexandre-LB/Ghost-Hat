@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4024031711102172541}
   - component: {fileID: 5420776968401985656}
+  - component: {fileID: -1004168179172223579}
   - component: {fileID: -6780818561817121281}
   m_Layer: 7
   m_Name: LampePlafond
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 8efc89db456dea44b86acb8ce4830728, type: 3}
   m_Color: {r: 0.94148654, g: 0.9433962, b: 0.91135633, a: 1}
   m_FlipX: 0
@@ -83,6 +84,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1004168179172223579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4247466777121906654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caed7a4046b42674bbbe81b19378649b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightOff: {fileID: 0}
+  salle: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  allumer: {fileID: 21300000, guid: 8efc89db456dea44b86acb8ce4830728, type: 3}
+  eteins: {fileID: 21300000, guid: bdf54b06b7edac84281858ff7954bad9, type: 3}
 --- !u!61 &-6780818561817121281
 BoxCollider2D:
   m_ObjectHideFlags: 0
