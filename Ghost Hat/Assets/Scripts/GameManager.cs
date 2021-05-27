@@ -10,7 +10,7 @@ public enum GameState
 }
 public class GameManager : MonoBehaviour
 {
-    public Camera cam;
+    public GameObject cam;
     private Transform mainCam;
 
     private static GameManager _instance;
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     public Salle room;
     private void Awake()
     {
-        this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        this.cam = GameObject.FindGameObjectWithTag("Cam");
         _instance = this;
         _state = 0;
     }
@@ -52,6 +52,11 @@ public class GameManager : MonoBehaviour
                 UIManager.Instance.pauseScreen.SetActive(true);
                 break;
         }
+    }
+
+    private void Update()
+    {
+        this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
     public void CameraScreen()

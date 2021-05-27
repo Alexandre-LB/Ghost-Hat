@@ -6,7 +6,7 @@ public class CameraItem : Item
 {
     private bool move;
     private bool placed;
-    public Camera objectCamera;
+    public GameObject objectCamera;
     private Transform mainCam;
     private float mainCamPosX;
     private float mainCamPosY;
@@ -15,11 +15,12 @@ public class CameraItem : Item
 
     private void Awake()
     {
-        this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        this.objectCamera = GameObject.FindGameObjectWithTag("Cam");
     }
 
     void FixedUpdate()
     {
+        this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
         if (move == false)
         {
             Mouse(0, 0);

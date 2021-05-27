@@ -12,6 +12,9 @@ TagManager:
   - Camera
   - Lumiere
   - House
+  - Radar
+  - Cake
+  - Cam
   layers:
   - Default
   - TransparentFX
