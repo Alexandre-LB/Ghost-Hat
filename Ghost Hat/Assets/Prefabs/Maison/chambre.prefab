@@ -916,6 +916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: filtre lumiere
       objectReference: {fileID: 0}
+    - target: {fileID: 276575023864607988, guid: 3fe69f3ace740894380efa2fa56485f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 276575023864607994, guid: 3fe69f3ace740894380efa2fa56485f3, type: 3}
       propertyPath: m_RootOrder
       value: 10

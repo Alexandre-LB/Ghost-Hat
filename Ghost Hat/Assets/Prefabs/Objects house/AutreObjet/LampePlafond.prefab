@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LightOff: {fileID: 0}
   salle: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 5420776968401985656}
   allumer: {fileID: 21300000, guid: 8efc89db456dea44b86acb8ce4830728, type: 3}
   eteins: {fileID: 21300000, guid: bdf54b06b7edac84281858ff7954bad9, type: 3}
 --- !u!61 &-6780818561817121281

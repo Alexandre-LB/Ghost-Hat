@@ -32,6 +32,7 @@ public class HouseBehaviour : MonoBehaviour
         {
             listFantome[i].ChooseObject();
         }
+        GameManager.Instance.room = listSalle[0];
     }
     void Start()
     {
