@@ -17,7 +17,7 @@ public class Salle : MonoBehaviour
     [HideInInspector]
     public Cake gateau;
     [HideInInspector]
-    public bool lumiere;
+    public bool lumiere = true;
     [HideInInspector]
     public GhostIA gourmand;
     [HideInInspector]
