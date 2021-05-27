@@ -7,7 +7,7 @@ public class CameraItem : Item
     private bool move;
     private bool placed;
     public GameObject objectCamera;
-    private Transform mainCam;
+    public Transform mainCam;
     private float mainCamPosX;
     private float mainCamPosY;
     public bool cameraButton;
@@ -34,7 +34,7 @@ public class CameraItem : Item
             GameManager.Instance.CameraScreen();
             cameraButton = true;
             mainCamPosX = mainCam.position.x;
-            mainCamPosY = mainCam.position.x;
+            mainCamPosY = mainCam.position.y;
             placed = true;
             GameManager.Instance.room.cameraStand = true;
             rb2d.bodyType = RigidbodyType2D.Dynamic;

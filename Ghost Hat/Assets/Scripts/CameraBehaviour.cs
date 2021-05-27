@@ -12,7 +12,7 @@ public class CameraBehaviour : MonoBehaviour
     public HouseBehaviour house;
     bool moving;
 
-    void Start()
+    void Awake()
     {
         nbSalleX = house.x/2 +1;
         nbSalleY = house.y / 2+1 ;
