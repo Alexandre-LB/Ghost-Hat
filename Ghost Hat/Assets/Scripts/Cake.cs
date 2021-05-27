@@ -13,6 +13,10 @@ public class Cake : Item
         if (move == false)
         {
             Mouse(0,0);
+            if (Input.GetMouseButton(1))
+            {
+                Destroy();
+            }
         }
 
         if (Input.GetMouseButton(0) && placed == false)

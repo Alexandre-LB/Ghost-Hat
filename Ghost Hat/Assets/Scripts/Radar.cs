@@ -9,13 +9,17 @@ public class Radar : Item
     private Transform ghostObject;
     public SpriteRenderer spriteRenderer;
 
-    void Update()
+    private void Update()
     {
         Mouse(0.05f, 0);
         if (GameObject.FindGameObjectWithTag("Oreille"))
         {
             this.ghostObject = GameObject.FindGameObjectWithTag("Oreille").transform;
             float distToPlayer = Vector2.Distance(transform.position, ghostObject.position);
+        }
+        if (Input.GetMouseButton(1))
+        {
+            Destroy();
         }
     }
 

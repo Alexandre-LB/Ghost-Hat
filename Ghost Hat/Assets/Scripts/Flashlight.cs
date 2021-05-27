@@ -16,5 +16,9 @@ public class Flashlight : Item
         {
             transform.Rotate(Vector3.back * 6);
         }
+        if (Input.GetMouseButton(1))
+        {
+            Destroy();
+        }
     }
 }

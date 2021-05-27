@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     }
     [HideInInspector]
     public bool[,] cameraRoom;
-    [HideInInspector]
+    //[HideInInspector]
     public Salle room;
     private void Awake()
     {

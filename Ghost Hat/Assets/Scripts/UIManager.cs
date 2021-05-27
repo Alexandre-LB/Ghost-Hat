@@ -287,7 +287,6 @@ public class UIManager : MonoBehaviour
     {
         titleSceen.SetActive(false);
         gameScreen.SetActive(false);
-        victoryScreen.SetActive(false);
         star2.SetActive(false);
         star3.SetActive(false);
         levelScreen.SetActive(true);

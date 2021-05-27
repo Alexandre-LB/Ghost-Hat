@@ -10,13 +10,11 @@ public class SwitchLight : MonoBehaviour
     public Sprite allumer;
     public Sprite eteins;
     
-    // Start is called before the first frame update
     void Start()
     {
         LightOff.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

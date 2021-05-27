@@ -37,5 +37,9 @@ public class SpiritBox : Item
                 spriteRenderer.sprite = states[0];
                 break;
         }
+        if (Input.GetMouseButton(1))
+        {
+            Destroy();
+        }
     }
 }
