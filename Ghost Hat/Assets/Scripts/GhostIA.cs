@@ -14,7 +14,7 @@ public class GhostIA : MonoBehaviour
     int rand;
     Rigidbody2D rb;
     bool rushCake;
-    float moveTimer = 0;
+    float moveTimer = 1;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
