@@ -14,9 +14,7 @@ public class GhostIA : MonoBehaviour
     int rand;
     Rigidbody2D rb;
     bool rushCake;
-    float moveTimer = 0;
-    public AudioClip ghostSound;
-
+    float moveTimer = 1;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -102,7 +100,6 @@ public class GhostIA : MonoBehaviour
     }
     public void ActiveGhost()
     {
-        SoundManager.Instance.Playsound(ghostSound, 0.1f);
         visible = true;
         fantome.SetActive(true);
     }
