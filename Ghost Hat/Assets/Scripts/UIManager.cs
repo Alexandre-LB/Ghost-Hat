@@ -107,7 +107,6 @@ public class UIManager : MonoBehaviour
         if(GameManager.State == GameState.Game)
         {
             TimeCount();
-            Debug.Log(GameManager.Instance.room.lumiere);
             if (GameManager.Instance.room != null && GameManager.Instance.room.lumiere == false)
             {
                 Panik();
