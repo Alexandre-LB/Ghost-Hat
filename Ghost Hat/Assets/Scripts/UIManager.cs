@@ -116,7 +116,7 @@ public class UIManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameState.Pause);
         }
-        if (panik == 0 || tictac == 0)
+        if (panik == 0 || hour == 0)
         {
             GameManager.Instance.ChangeState(GameState.MainMenu);
             deathScreen.SetActive(true);
