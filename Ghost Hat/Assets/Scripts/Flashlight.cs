@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Flashlight : Item
 {
+    public GameObject lightAura;
+
     private void Update()
     {
         Mouse(0, 0);
@@ -19,6 +21,15 @@ public class Flashlight : Item
         if (Input.GetMouseButton(1))
         {
             Destroy();
+        }
+
+        if (GameManager.Instance.room.lumiere)
+        {
+            lightAura.SetActive(false);
+        }
+        else
+        {
+            lightAura.SetActive(true);
         }
     }
 }
