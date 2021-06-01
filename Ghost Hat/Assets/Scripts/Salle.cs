@@ -26,6 +26,11 @@ public class Salle : MonoBehaviour
     [HideInInspector]
     public List<GhostIA> ghostList = new List<GhostIA>();
 
+    private void Start()
+    {
+        lumiere = true;    
+    }
+
     private void Update()
     {
         if (ghostList.Count == 3)
