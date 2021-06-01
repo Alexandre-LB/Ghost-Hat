@@ -47,7 +47,7 @@ public class Salle : MonoBehaviour
             }
         }
 
-        if(lumiere == false && cameraStand == true)
+        if(lumiere == false && cameraStand == true && timide != null)
         {
             timide.Apparait();
         }
