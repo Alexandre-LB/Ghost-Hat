@@ -107,7 +107,6 @@ public class UIManager : MonoBehaviour
         if(GameManager.State == GameState.Game)
         {
             TimeCount();
-            Debug.Log(GameManager.Instance.room.lumiere);
             if (GameManager.Instance.room != null && GameManager.Instance.room.lumiere == false)
             {
                 Panik();
@@ -117,7 +116,7 @@ public class UIManager : MonoBehaviour
         {
             GameManager.Instance.ChangeState(GameState.Pause);
         }
-        if (panik == 0 || tictac == 0)
+        if (panik == 0 || hour == 0)
         {
             GameManager.Instance.ChangeState(GameState.MainMenu);
             deathScreen.SetActive(true);
@@ -288,6 +287,7 @@ public class UIManager : MonoBehaviour
     {
         titleSceen.SetActive(false);
         gameScreen.SetActive(false);
+        victoryScreen.SetActive(false);
         star2.SetActive(false);
         star3.SetActive(false);
         levelScreen.SetActive(true);

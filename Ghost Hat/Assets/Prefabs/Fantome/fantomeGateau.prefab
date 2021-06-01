@@ -103,6 +103,7 @@ MonoBehaviour:
   type: 0
   speed: 200
   visible: 0
+  ghostSound: {fileID: 8300000, guid: 906235b0c47eb3e4aa003244a3bab7e7, type: 3}
 --- !u!50 &9086279706221394732
 Rigidbody2D:
   serializedVersion: 4
