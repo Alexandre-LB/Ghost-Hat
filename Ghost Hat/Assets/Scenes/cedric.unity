@@ -438,11 +438,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3865032141309395255, guid: 7809b1307c460f54c86d4853bb19fc9e, type: 3}
       propertyPath: listSalle.Array.size
@@ -618,11 +618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4338459413285297779, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.657356
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4338459413285297779, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.33
+      value: 11.7
       objectReference: {fileID: 0}
     - target: {fileID: 4338459413285297779, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: m_LocalPosition.z
@@ -658,7 +658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: posX
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: posY
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: maison
