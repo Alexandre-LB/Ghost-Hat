@@ -13,7 +13,7 @@ public class Cake : Item
         if (move == false)
         {
             Mouse(0,0);
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(1) && !UIManager.Instance.cake.activeSelf)
             {
                 Destroy();
             }
