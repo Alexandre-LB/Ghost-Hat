@@ -3,7 +3,10 @@ guid: c283428ed04a49a41829ff96d0ead6a4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - maison: {instanceID: 0}
+  - fantome: {instanceID: 0}
+  - ghostSound: {fileID: 8300000, guid: 906235b0c47eb3e4aa003244a3bab7e7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

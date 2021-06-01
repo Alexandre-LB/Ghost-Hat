@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject cam;
     private Transform mainCam;
+    public AudioClip sonsAmbiance;
 
     private static GameManager _instance;
     public static GameManager Instance
@@ -47,6 +48,8 @@ public class GameManager : MonoBehaviour
             case GameState.MainMenu:
                 break;
             case GameState.Game:
+                SoundManager.Instance.StopAllSounds();
+                SoundManager.Instance.Playsound(sonsAmbiance, 0.1f);
                 break;
             case GameState.Pause:
                 UIManager.Instance.pauseScreen.SetActive(true);
