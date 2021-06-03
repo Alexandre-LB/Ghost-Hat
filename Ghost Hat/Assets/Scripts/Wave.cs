@@ -21,7 +21,7 @@ public class Wave : Item
         ghostTarget = distToPlayer;
         for (int i = 0; i < houseObject.listFantome.Count; i++)
         {
-            if (houseObject.listFantome[i].tag == GameObject.FindGameObjectWithTag("Oreille").tag)
+            if (GameObject.FindGameObjectWithTag("Oreille").tag != null && houseObject.listFantome[i].tag == GameObject.FindGameObjectWithTag("Oreille").tag)
             {
                 distToPlayer = Vector2.Distance(transform.position, houseObject.listFantome[i].transform.position);
                 if (distToPlayer < ghostTarget)
