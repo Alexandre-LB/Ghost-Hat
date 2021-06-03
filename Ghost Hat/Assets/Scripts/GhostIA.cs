@@ -85,7 +85,7 @@ public class GhostIA : MonoBehaviour
             ownRoom.ghostList.Add(this);
             rand = Random.Range(0, ownRoom.listObject.Count);
             ownRoom.listObject[rand].fantome = this;
-            transform.position = ownRoom.listObject[rand].transform.position;
+            transform.position = new Vector3(ownRoom.listObject[rand].transform.position.x, ownRoom.listObject[rand].transform.position.y, -0.99f);
             ownRoom.listObject.RemoveAt(rand);
             if(type == FantomeType.Gourmand)
             {

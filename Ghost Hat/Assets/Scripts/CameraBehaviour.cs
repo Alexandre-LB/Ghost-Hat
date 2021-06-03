@@ -10,7 +10,6 @@ public class CameraBehaviour : MonoBehaviour
     int nbSalleX;
     int nbSalleY;
     public HouseBehaviour house;
-    bool moving;
 
     void Awake()
     {
@@ -32,7 +31,7 @@ public class CameraBehaviour : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.UpArrow) && moving == false)
+        if (Input.GetKeyUp(KeyCode.UpArrow) && GameManager.Instance.moving == false)
         {
             if(currentY+1 < nbSalleY)
             {
@@ -40,7 +39,7 @@ public class CameraBehaviour : MonoBehaviour
                 currentY++;
             }
         }
-        if (Input.GetKeyUp(KeyCode.DownArrow) && moving == false)
+        if (Input.GetKeyUp(KeyCode.DownArrow) && GameManager.Instance.moving == false)
         {
             if (currentY > 0)
             {
@@ -48,7 +47,7 @@ public class CameraBehaviour : MonoBehaviour
                 currentY--;
             }
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow) && moving == false)
+        if (Input.GetKeyUp(KeyCode.RightArrow) && GameManager.Instance.moving == false)
         {
             if(currentX+1 < nbSalleX)
             {
@@ -56,7 +55,7 @@ public class CameraBehaviour : MonoBehaviour
                 currentX++;
             }
         }
-        if (Input.GetKeyUp(KeyCode.LeftArrow) && moving == false)
+        if (Input.GetKeyUp(KeyCode.LeftArrow) && GameManager.Instance.moving == false)
         {
             if (currentX > 0)
             {
@@ -73,9 +72,9 @@ public class CameraBehaviour : MonoBehaviour
 
         IEnumerator Moving()
         {
-            moving = true;
+            GameManager.Instance.moving = true;
             yield return new WaitForSeconds(1);
-            moving = false;
+            GameManager.Instance.moving = false;
         }
     }
 }

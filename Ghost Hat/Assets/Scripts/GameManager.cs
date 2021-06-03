@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
     public bool[,] cameraRoom;
     [HideInInspector]
     public Salle room;
+    public bool moving;
+
     private void Awake()
     {
         this.cam = GameObject.FindGameObjectWithTag("Cam");

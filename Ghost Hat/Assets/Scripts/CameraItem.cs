@@ -46,7 +46,13 @@ public class CameraItem : Item
 
         if (UIManager.Item == Inventory.CameraVision)
         {
-            objectCamera.transform.position = new Vector3(mainCamPosX, mainCamPosY, -1);
+            objectCamera.transform.position = new Vector3(mainCamPosX, mainCamPosY, transform.position.z);
+        }
+
+        if (GameManager.Instance.moving == true && placed == false)
+        {
+            UIManager.Instance.ChangeItem(Inventory.None);
+            Destroy(gameObject);
         }
     }
 
