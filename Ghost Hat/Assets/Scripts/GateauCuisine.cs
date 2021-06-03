@@ -13,7 +13,7 @@ public class GateauCuisine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && !UIManager.Instance.cake.activeSelf)
         {
             UIManager.Instance.cake.SetActive(true);
             Destroy(this);
