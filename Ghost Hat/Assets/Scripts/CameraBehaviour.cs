@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -13,8 +14,16 @@ public class CameraBehaviour : MonoBehaviour
 
     void Awake()
     {
-        nbSalleX = house.x / 2 + 2 ;
-        nbSalleY = house.y / 2 + 2;
+        if(SceneManager.GetActiveScene().buildIndex < 7)
+        {
+            nbSalleX = house.x / 2 + 1;
+            nbSalleY = house.y / 2 + 1;
+        }
+        else
+        {
+            nbSalleX = house.x / 2 + 2;
+            nbSalleY = house.y / 2 + 2;
+        }
         tabSalle = new Transform[nbSalleX, nbSalleY];
         for (int i = 0; i < nbSalleY; i++)
         {
