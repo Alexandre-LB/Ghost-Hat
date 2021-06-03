@@ -13,8 +13,8 @@ public class CameraBehaviour : MonoBehaviour
 
     void Awake()
     {
-        nbSalleX = house.x/2 +1;
-        nbSalleY = house.y / 2+1 ;
+        nbSalleX = house.x / 2 + 2 ;
+        nbSalleY = house.y / 2 + 2;
         tabSalle = new Transform[nbSalleX, nbSalleY];
         for (int i = 0; i < nbSalleY; i++)
         {

@@ -24,8 +24,11 @@ public class HouseBehaviour : MonoBehaviour
         {
             for (int j = 0; j < y; j++)
             {
-                salle[i, j] = listSalle[compteur];
-                compteur++;
+                if(compteur < listSalle.Count)
+                {
+                    salle[i, j] = listSalle[compteur];
+                    compteur++;
+                }
             }
         }
         for (int i = 0; i < listFantome.Count; i++)

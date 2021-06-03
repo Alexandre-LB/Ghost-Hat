@@ -100,8 +100,8 @@ public class GhostIA : MonoBehaviour
     }
     public void ActiveGhost()
     {
-        visible = true;
         fantome.SetActive(true);
+        visible = true;
     }
     private void OnMouseDown()
     {
