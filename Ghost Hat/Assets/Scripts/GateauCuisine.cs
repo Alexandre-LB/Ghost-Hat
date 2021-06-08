@@ -16,7 +16,7 @@ public class GateauCuisine : MonoBehaviour
         if(Input.GetMouseButtonUp(0) && !UIManager.Instance.cake.activeSelf)
         {
             UIManager.Instance.cake.SetActive(true);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

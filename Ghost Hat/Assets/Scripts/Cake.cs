@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Cake : Item
 {
+    [SerializeField]
     private bool move;
+    [SerializeField]
     private bool placed;
     public Rigidbody2D rb2d;
 
@@ -38,7 +40,7 @@ public class Cake : Item
 
     private void OnMouseDown()
     {
-        if (placed == true && Input.GetMouseButton(0) && UIManager.Item == Inventory.None)
+        if (placed == true && Input.GetMouseButton(0) && UIManager.Item == Inventory.None && !UIManager.Instance.cake.activeSelf)
         {
             UIManager.Instance.cake.SetActive(true);
             Destroy(gameObject);
