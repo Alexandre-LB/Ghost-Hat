@@ -95,6 +95,9 @@ public class UIManager : MonoBehaviour
     Vector2 slotPosition;
     Vector2 slotStart;
     Vector2 slotEnd;
+    Vector2 topButton;
+    Vector2 bottomButton;
+    bool slotClose;
     void Awake()
     {
         _instance = this;
@@ -111,6 +114,8 @@ public class UIManager : MonoBehaviour
         slotPosition = itemSlot.transform.position;
         slotStart = itemSlot.transform.position;
         slotEnd = new Vector2(itemSlot.transform.position.x, itemSlot.transform.position.y - 300);
+        bottomButton = openButton.transform.position;
+        topButton = closeButton.transform.position;
     }
     void Update()
     {
@@ -139,6 +144,26 @@ public class UIManager : MonoBehaviour
     private void FixedUpdate()
     {
         itemSlot.transform.position = Vector2.Lerp(itemSlot.transform.position, slotPosition, Time.deltaTime * 2);
+        if (slotClose)
+        {
+            closeButton.transform.position = Vector2.Lerp(closeButton.transform.position, bottomButton, Time.deltaTime * 2);
+        }
+        else
+        {
+            openButton.transform.position = Vector2.Lerp(openButton.transform.position, topButton, Time.deltaTime * 2);
+        }
+        if(closeButton.transform.position == new Vector3(bottomButton.x, bottomButton.y, 0))
+        {
+            closeButton.transform.position = topButton;
+            closeButton.SetActive(false);
+            openButton.SetActive(true);
+        }
+        if (openButton.transform.position == new Vector3(topButton.x, topButton.y, 0))
+        {
+            openButton.transform.position = bottomButton;
+            openButton.SetActive(false);
+            closeButton.SetActive(true);
+        }
     }
     void Panik()
     {
@@ -286,14 +311,12 @@ public class UIManager : MonoBehaviour
     public void Close()
     {
         slotPosition = slotEnd;
-        closeButton.SetActive(false);
-        openButton.SetActive(true);
+        slotClose = true;
     }
     public void Open()
     {
         slotPosition = slotStart;
-        closeButton.SetActive(true);
-        openButton.SetActive(false);
+        slotClose = false;
     }
     public void ToMainMenu()
     {
