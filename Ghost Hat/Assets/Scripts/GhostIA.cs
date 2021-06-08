@@ -22,6 +22,7 @@ public class GhostIA : MonoBehaviour
     }
     void Update()
     {
+        fantome.transform.position = new Vector3(transform.position.x, transform.position.y, -0.99f);
         moveTimer += Time.deltaTime;
         if (rushCake)
         {
