@@ -43,7 +43,6 @@ public class HouseBehaviour : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(UIManager.Instance.tictac * UIManager.Instance.panik);
         if (listFantome.Count == 0)
         {
             score = UIManager.Instance.tictac * UIManager.Instance.panik;
