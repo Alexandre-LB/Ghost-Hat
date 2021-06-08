@@ -260,6 +260,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1898179058919985472, guid: a795a96713a16e240a98cc8760cf930a, type: 3}
+      propertyPath: posX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1898179058919985472, guid: a795a96713a16e240a98cc8760cf930a, type: 3}
       propertyPath: posY
       value: 1
       objectReference: {fileID: 0}
@@ -337,7 +341,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2586548180753272372, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
       propertyPath: posX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2586548180753272372, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
       propertyPath: posY
@@ -829,6 +833,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6326034806038841137, guid: 6a9f188cb5c19c545a40e12fa5fd469c, type: 3}
+      propertyPath: posX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6326034806038841137, guid: 6a9f188cb5c19c545a40e12fa5fd469c, type: 3}
       propertyPath: maison
       value: 
       objectReference: {fileID: 943591292}
@@ -975,7 +983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2338033124440781051, guid: 2baf031af8e4f6947b3fd45b4fe7a4b7, type: 3}
       propertyPath: posX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2338033124440781051, guid: 2baf031af8e4f6947b3fd45b4fe7a4b7, type: 3}
       propertyPath: maison
