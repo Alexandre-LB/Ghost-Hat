@@ -28,6 +28,12 @@ public class Cake : Item
             GameManager.Instance.room.gateau = this;
             rb2d.bodyType = RigidbodyType2D.Dynamic;
         }
+
+        if (GameManager.Instance.moving == true && placed == false)
+        {
+            UIManager.Instance.ChangeItem(Inventory.None);
+            Destroy(gameObject);
+        }
     }
 
     private void OnMouseDown()
