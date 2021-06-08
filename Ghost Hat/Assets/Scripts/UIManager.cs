@@ -109,7 +109,7 @@ public class UIManager : MonoBehaviour
         hour = 19;
         minUni = 0;
         minDiz = 0;
-        pointeur.transform.position = new Vector2(1210, 960);
+        pointeur.rectTransform.position = new Vector2(550, 420);
         time.text = hour + "H" + minDiz + minUni;
         slotPosition = itemSlot.transform.position;
         slotStart = itemSlot.transform.position;
@@ -147,18 +147,20 @@ public class UIManager : MonoBehaviour
         if (slotClose)
         {
             closeButton.transform.position = Vector2.Lerp(closeButton.transform.position, bottomButton, Time.deltaTime * 2);
+            Debug.Log("test");
         }
         else
         {
             openButton.transform.position = Vector2.Lerp(openButton.transform.position, topButton, Time.deltaTime * 2);
         }
-        if(closeButton.transform.position == new Vector3(bottomButton.x, bottomButton.y, 0))
+        if(closeButton.transform.position == new Vector3(bottomButton.x, bottomButton.y, closeButton.transform.position.z))
         {
             closeButton.transform.position = topButton;
             closeButton.SetActive(false);
             openButton.SetActive(true);
+            Debug.Log("test2");
         }
-        if (openButton.transform.position == new Vector3(topButton.x, topButton.y, 0))
+        if (openButton.transform.position == new Vector3(topButton.x, topButton.y, openButton.transform.position.z))
         {
             openButton.transform.position = bottomButton;
             openButton.SetActive(false);
@@ -171,7 +173,7 @@ public class UIManager : MonoBehaviour
         if (panikCountDown > fear && panik > 0)
         {
             panik -= 1;
-            pointeur.transform.position = new Vector2(pointeur.transform.position.x - 5, pointeur.transform.position.y);
+            pointeur.rectTransform.position = new Vector2(pointeur.rectTransform.position.x - 10, pointeur.rectTransform.position.y);
             panikCountDown = 0;
         }
     }
