@@ -60,6 +60,10 @@ public class UIManager : MonoBehaviour
     public Image pointeur;
     [SerializeField]
     GameObject itemSlot;
+    [SerializeField]
+    GameObject openButton;
+    [SerializeField]
+    GameObject closeButton;
     public GameObject cake;
     public GameObject polaroid;
     public CameraItem trepied;
@@ -88,6 +92,9 @@ public class UIManager : MonoBehaviour
     public Text invisibleText;
     public Text earText;
     public EventSystem EventSystem;
+    Vector2 slotPosition;
+    Vector2 slotStart;
+    Vector2 slotEnd;
     void Awake()
     {
         _instance = this;
@@ -101,6 +108,9 @@ public class UIManager : MonoBehaviour
         minDiz = 0;
         pointeur.transform.position = new Vector2(1210, 960);
         time.text = hour + "H" + minDiz + minUni;
+        slotPosition = itemSlot.transform.position;
+        slotStart = itemSlot.transform.position;
+        slotEnd = new Vector2(itemSlot.transform.position.x, itemSlot.transform.position.y - 300);
     }
     void Update()
     {
@@ -125,6 +135,10 @@ public class UIManager : MonoBehaviour
         gluttonyText.text = "= " + gluttonyCount;
         invisibleText.text = "= " + invisibleCount;
         shyText.text = "= " + shyCount;
+    }
+    private void FixedUpdate()
+    {
+        itemSlot.transform.position = Vector2.Lerp(itemSlot.transform.position, slotPosition, Time.deltaTime * 2);
     }
     void Panik()
     {
@@ -229,7 +243,7 @@ public class UIManager : MonoBehaviour
         else if (_item == Inventory.None)
         {
             ChangeItem(Inventory.Cake);
-            actualCake = Instantiate(gateau, new Vector2(0, 0), Quaternion.identity);
+            actualCake = Instantiate(gateau, new Vector3(0, 0, -0.99f), Quaternion.identity);
         }
     }
     public void CameraVision()
@@ -268,6 +282,18 @@ public class UIManager : MonoBehaviour
 
                 break;
         }
+    }
+    public void Close()
+    {
+        slotPosition = slotEnd;
+        closeButton.SetActive(false);
+        openButton.SetActive(true);
+    }
+    public void Open()
+    {
+        slotPosition = slotStart;
+        closeButton.SetActive(true);
+        openButton.SetActive(false);
     }
     public void ToMainMenu()
     {
