@@ -109,7 +109,7 @@ public class UIManager : MonoBehaviour
         hour = 19;
         minUni = 0;
         minDiz = 0;
-        pointeur.rectTransform.position = new Vector2(550, 420);
+        pointeur.rectTransform.position = new Vector2(1510, 940);
         time.text = hour + "H" + minDiz + minUni;
         slotPosition = itemSlot.transform.position;
         slotStart = itemSlot.transform.position;
@@ -147,7 +147,7 @@ public class UIManager : MonoBehaviour
         if (slotClose)
         {
             closeButton.transform.position = Vector2.Lerp(closeButton.transform.position, bottomButton, Time.deltaTime * 2);
-            Debug.Log("test");
+            //Debug.Log("test");
         }
         else
         {
@@ -158,7 +158,7 @@ public class UIManager : MonoBehaviour
             closeButton.transform.position = topButton;
             closeButton.SetActive(false);
             openButton.SetActive(true);
-            Debug.Log("test2");
+            //Debug.Log("test2");
         }
         if (openButton.transform.position == new Vector3(topButton.x, topButton.y, openButton.transform.position.z))
         {
@@ -173,7 +173,7 @@ public class UIManager : MonoBehaviour
         if (panikCountDown > fear && panik > 0)
         {
             panik -= 1;
-            pointeur.rectTransform.position = new Vector2(pointeur.rectTransform.position.x - 10, pointeur.rectTransform.position.y);
+            pointeur.rectTransform.position = new Vector2(pointeur.rectTransform.position.x - 10.8f, pointeur.rectTransform.position.y);
             panikCountDown = 0;
         }
     }
@@ -322,31 +322,32 @@ public class UIManager : MonoBehaviour
     }
     public void ToMainMenu()
     {
-        pauseScreen.SetActive(false);
-        creditScreen.SetActive(false);
-        levelScreen.SetActive(false);
-        gameScreen.SetActive(false);
-        deathScreen.SetActive(false);
-        titleSceen.SetActive(true);
+        Debug.Log("test");
         GameManager.Instance.ChangeState(GameState.MainMenu);
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             SceneManager.LoadScene(1);
         }
+        titleSceen.SetActive(true);
+        pauseScreen.SetActive(false);
+        creditScreen.SetActive(false);
+        levelScreen.SetActive(false);
+        gameScreen.SetActive(false);
+        deathScreen.SetActive(false);
     }
     public void ToLevelMap()
     {
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene(1);
+        }
         titleSceen.SetActive(false);
         gameScreen.SetActive(false);
         victoryScreen.SetActive(false);
         star2.SetActive(false);
         star3.SetActive(false);
         levelScreen.SetActive(true);
-        GameManager.Instance.ChangeState(GameState.MainMenu);
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            SceneManager.LoadScene(1);
-        }
     }
     public void ChargeLevel(int niveau)
     {

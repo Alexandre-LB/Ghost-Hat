@@ -134,6 +134,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2065922108968732335, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065922108968732335, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257032839}
+    - target: {fileID: 2065922108968732335, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065922108968732335, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5472214257376002557, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -180,6 +196,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+--- !u!114 &257032839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1600166243431866883, guid: aac39fd3c81a4b34795a0311a6d3a936, type: 3}
+  m_PrefabInstance: {fileID: 94750034}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721fb8879612f7144b8deb26e871ba53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &634774685
 GameObject:
   m_ObjectHideFlags: 0

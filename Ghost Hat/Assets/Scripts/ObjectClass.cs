@@ -68,12 +68,12 @@ public class ObjectClass : MonoBehaviour
             if (UIManager.Instance.panik <= 30)
             {
                 UIManager.Instance.panik = 0;
-                UIManager.Instance.pointeur.transform.position = new Vector2(710, UIManager.Instance.pointeur.transform.position.y);
+                UIManager.Instance.pointeur.rectTransform.position = new Vector2(430, UIManager.Instance.pointeur.transform.position.y);
             }
             else
             {
                 UIManager.Instance.panik -= 30;
-                UIManager.Instance.pointeur.transform.position = new Vector2(UIManager.Instance.pointeur.transform.position.x - 150, UIManager.Instance.pointeur.transform.position.y);
+                UIManager.Instance.pointeur.rectTransform.position = new Vector2(UIManager.Instance.pointeur.transform.position.x - 324, UIManager.Instance.pointeur.transform.position.y);
             }
         }
     }
