@@ -126,17 +126,15 @@ public class UIManager : MonoBehaviour
             {
                 Panik();
             }
+            if (panik == 0 || hour == 0)
+            {
+                GameManager.Instance.ChangeState(GameState.MainMenu);
+                deathScreen.SetActive(true);
+            }
         }
         if (Input.GetKeyDown("p"))
         {
             GameManager.Instance.ChangeState(GameState.Pause);
-        }
-        if (panik == 0 || hour == 0)
-        {
-            panik = 100;
-            hour = 300;
-            GameManager.Instance.ChangeState(GameState.MainMenu);
-            deathScreen.SetActive(true);
         }
         earText.text = "= " + earCount;
         gluttonyText.text = "= " + gluttonyCount;
@@ -324,32 +322,31 @@ public class UIManager : MonoBehaviour
     }
     public void ToMainMenu()
     {
-        Debug.Log("test");
-        GameManager.Instance.ChangeState(GameState.MainMenu);
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            SceneManager.LoadScene(1);
-        }
         titleSceen.SetActive(true);
         pauseScreen.SetActive(false);
         creditScreen.SetActive(false);
         levelScreen.SetActive(false);
         gameScreen.SetActive(false);
         deathScreen.SetActive(false);
-    }
-    public void ToLevelMap()
-    {
         GameManager.Instance.ChangeState(GameState.MainMenu);
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             SceneManager.LoadScene(1);
         }
+    }
+    public void ToLevelMap()
+    {
         titleSceen.SetActive(false);
         gameScreen.SetActive(false);
         victoryScreen.SetActive(false);
         star2.SetActive(false);
         star3.SetActive(false);
         levelScreen.SetActive(true);
+        GameManager.Instance.ChangeState(GameState.MainMenu);
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
     public void ChargeLevel(int niveau)
     {
