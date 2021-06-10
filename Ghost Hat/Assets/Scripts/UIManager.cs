@@ -133,6 +133,8 @@ public class UIManager : MonoBehaviour
         }
         if (panik == 0 || hour == 0)
         {
+            panik = 100;
+            hour = 300;
             GameManager.Instance.ChangeState(GameState.MainMenu);
             deathScreen.SetActive(true);
         }
