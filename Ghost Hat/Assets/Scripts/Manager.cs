@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    void Awake()
+    void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         if(SceneManager.GetActiveScene().buildIndex == 0)
