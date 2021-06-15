@@ -14,7 +14,6 @@ public class Map : MonoBehaviour
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0f && carte.rectTransform.position.x <= 3298)
             {
-                Debug.Log(transform.position);
                 carte.rectTransform.position = new Vector2(carte.rectTransform.position.x + 40, carte.rectTransform.position.y);
                 button.transform.position = new Vector2(button.transform.position.x + 40, button.transform.position.y);
             }
