@@ -77,7 +77,7 @@ public class GhostIA : MonoBehaviour
     public void ChooseObject()
     {
         ownRoom = maison.listSalle[Random.Range(0, maison.listSalle.Count)];
-        if(type == FantomeType.Gourmand && (ownRoom.cuisine || ownRoom.gourmand != null) || type == FantomeType.Timide && ownRoom.timide != null)
+        if(type == FantomeType.Gourmand && (ownRoom.cuisine || ownRoom.gourmand != null) || type == FantomeType.Timide && ownRoom.timide != null || ownRoom.listObject.Count == 0)
         {
             ChooseObject();
         }

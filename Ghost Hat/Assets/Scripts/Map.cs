@@ -10,7 +10,6 @@ public class Map : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(carte.rectTransform.position);
         if(GameManager.State == GameState.MainMenu)
         {
             if (Input.GetAxis("Mouse ScrollWheel") > 0f && carte.rectTransform.position.x <= 3298)
