@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 9176987516393774265, guid: 2baf031af8e4f6947b3fd45b4fe7a4b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2baf031af8e4f6947b3fd45b4fe7a4b7, type: 3}
 --- !u!114 &352905450 stripped
@@ -1131,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 1236897058047439073, guid: a795a96713a16e240a98cc8760cf930a, type: 3}
       propertyPath: m_Name
       value: salle de bain
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331404305341558557, guid: a795a96713a16e240a98cc8760cf930a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 7011705650253799749, guid: a795a96713a16e240a98cc8760cf930a, type: 3}
       propertyPath: m_RootOrder
@@ -2142,6 +2150,10 @@ PrefabInstance:
       propertyPath: maison
       value: 
       objectReference: {fileID: 415777423}
+    - target: {fileID: 1144188742300496492, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.22
+      objectReference: {fileID: 0}
     - target: {fileID: 3773423617449304012, guid: c1d823bc714455c46a056d53ee1eec5a, type: 3}
       propertyPath: m_Size.x
       value: 20
@@ -2750,7 +2762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4024031711102172541, guid: 131a5644be07a294eaa72f1026abe634, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 4.51
       objectReference: {fileID: 0}
     - target: {fileID: 4024031711102172541, guid: 131a5644be07a294eaa72f1026abe634, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3782,7 +3794,7 @@ Transform:
   - {fileID: 469401394621426787}
   - {fileID: 6542489167525392720}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6407393203445264904
 PrefabInstance:
