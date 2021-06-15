@@ -1207,6 +1207,18 @@ PrefabInstance:
       propertyPath: position
       value: 
       objectReference: {fileID: 854453059}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: listObject.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: listObject.Array.data[3]
+      value: 
+      objectReference: {fileID: 854453061}
+    - target: {fileID: 6252836607005035292, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+      propertyPath: listObject.Array.data[4]
+      value: 
+      objectReference: {fileID: 854453060}
     - target: {fileID: 7766343886241779854, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.43
@@ -1237,6 +1249,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4338459413285297779, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
   m_PrefabInstance: {fileID: 854453057}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &854453060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1440129873698304628, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+  m_PrefabInstance: {fileID: 854453057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4876517f2638840b8da94b4d00b884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &854453061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5471704189029563058, guid: 1bc67f303fe302f49b9e854c9dbbc729, type: 3}
+  m_PrefabInstance: {fileID: 854453057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4876517f2638840b8da94b4d00b884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &907943741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4502,6 +4536,14 @@ PrefabInstance:
       propertyPath: allumer
       value: 
       objectReference: {fileID: 21300000, guid: 678ed4e4807378d49b987a8f758f7df3, type: 3}
+    - target: {fileID: 5944635852195748347, guid: e3185885773b0ef4ba940bc6f530529c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944635852195748347, guid: e3185885773b0ef4ba940bc6f530529c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84
+      objectReference: {fileID: 0}
     - target: {fileID: 6410429388923782750, guid: e3185885773b0ef4ba940bc6f530529c, type: 3}
       propertyPath: m_RootOrder
       value: 39
