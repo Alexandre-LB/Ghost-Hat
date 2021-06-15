@@ -78,7 +78,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SONS
+  m_Text: 'SONS
+
+    soundeffectplus.com'
 --- !u!1 &6284384573576442468
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +234,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ANIMATIONS
+  m_Text: 'ANIMATIONS
+
+    Mailys Tournay'
 --- !u!1 &6284384573865603937
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +395,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GRAPHISMES
+  m_Text: "GRAPHISMES\nElia Lopez\nJade Robert\nLouna Meissonnier\nMathilde Lech\xEAne\nC\xE9cile
+    Denave\nEmma Mautrot\nJulie Fernandez\nKilian Lefevre\nLaura Michel\nLucas Chazeau\nRayan
+    Dauliac\nMailys Tournay\nTatiana Fabert\nVictor Boutin"
 --- !u!1 &6284384574163563250
 GameObject:
   m_ObjectHideFlags: 0

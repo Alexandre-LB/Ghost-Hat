@@ -357,7 +357,7 @@ public class UIManager : MonoBehaviour
         pauseScreen.SetActive(false);
         gameScreen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.Game);
-        SceneManager.LoadScene(niveau + 2);
+        SceneManager.LoadScene(niveau + 1);
         Awake();
     }
     public void ToCredit()
