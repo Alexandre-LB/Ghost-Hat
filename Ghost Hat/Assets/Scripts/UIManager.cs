@@ -95,9 +95,57 @@ public class UIManager : MonoBehaviour
     Vector2 slotPosition;
     Vector2 slotStart;
     Vector2 slotEnd;
-    Vector2 topButton;
-    Vector2 bottomButton;
-    bool slotClose;
+
+    public GameObject Level1Star1;
+    public GameObject Level1Star2;
+    public GameObject Level1Star3;
+    public GameObject Level2Star1;
+    public GameObject Level2Star2;
+    public GameObject Level2Star3;
+    public GameObject Level3Star1;
+    public GameObject Level3Star2;
+    public GameObject Level3Star3;
+    public GameObject Level4Star1;
+    public GameObject Level4Star2;
+    public GameObject Level4Star3;
+    public GameObject Level5Star1;
+    public GameObject Level5Star2;
+    public GameObject Level5Star3;
+    public GameObject Level6Star1;
+    public GameObject Level6Star2;
+    public GameObject Level6Star3;
+    public GameObject Level7Star1;
+    public GameObject Level7Star2;
+    public GameObject Level7Star3;
+    public GameObject Level8Star1;
+    public GameObject Level8Star2;
+    public GameObject Level8Star3;
+    public GameObject Level9Star1;
+    public GameObject Level9Star2;
+    public GameObject Level9Star3;
+    public GameObject Level10Star1;
+    public GameObject Level10Star2;
+    public GameObject Level10Star3;
+    public Text score1Text;
+    public Text score2Text;
+    public Text score3Text;
+    public Text score4Text;
+    public Text score5Text;
+    public Text score6Text;
+    public Text score7Text;
+    public Text score8Text;
+    public Text score9Text;
+    public Text score10Text;
+    public int score1 = 0;
+    public int score2 = 0;
+    public int score3 = 0;
+    public int score4 = 0;
+    public int score5 = 0;
+    public int score6 = 0;
+    public int score7 = 0;
+    public int score8 = 0;
+    public int score9 = 0;
+    public int score10 = 0;
     void Awake()
     {
         _instance = this;
@@ -114,8 +162,6 @@ public class UIManager : MonoBehaviour
         slotPosition = itemSlot.transform.position;
         slotStart = itemSlot.transform.position;
         slotEnd = new Vector2(itemSlot.transform.position.x, itemSlot.transform.position.y - 300);
-        bottomButton = openButton.transform.position;
-        topButton = closeButton.transform.position;
     }
     void Update()
     {
@@ -144,26 +190,6 @@ public class UIManager : MonoBehaviour
     private void FixedUpdate()
     {
         itemSlot.transform.position = Vector2.Lerp(itemSlot.transform.position, slotPosition, Time.deltaTime * 2);
-        /*if (slotClose)
-        {
-            closeButton.transform.position = Vector2.Lerp(closeButton.transform.position, bottomButton, Time.deltaTime * 2);
-        }
-        else
-        {
-            openButton.transform.position = Vector2.Lerp(openButton.transform.position, topButton, Time.deltaTime * 2);
-        }
-        if(closeButton.transform.position == new Vector3(bottomButton.x, bottomButton.y, closeButton.transform.position.z))
-        {
-            closeButton.transform.position = topButton;
-            closeButton.SetActive(false);
-            openButton.SetActive(true);
-        }
-        if (openButton.transform.position == new Vector3(topButton.x, topButton.y, openButton.transform.position.z))
-        {
-            openButton.transform.position = bottomButton;
-            openButton.SetActive(false);
-            closeButton.SetActive(true);
-        }*/
     }
     void Panik()
     {
@@ -313,14 +339,12 @@ public class UIManager : MonoBehaviour
         slotPosition = slotEnd;
         openButton.SetActive(true);
         closeButton.SetActive(false);
-        //slotClose = true;
     }
     public void Open()
     {
         slotPosition = slotStart;
         openButton.SetActive(false);
         closeButton.SetActive(true);
-        //slotClose = false;
     }
     public void ToMainMenu()
     {
