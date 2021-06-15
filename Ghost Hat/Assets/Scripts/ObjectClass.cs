@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class ObjectClass : MonoBehaviour
 {
-    //[HideInInspector]
     public GhostIA fantome;
     SpriteRenderer spriteRenderer;
     Color defaultcolor;

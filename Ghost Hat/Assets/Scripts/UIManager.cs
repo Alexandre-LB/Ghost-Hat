@@ -144,10 +144,9 @@ public class UIManager : MonoBehaviour
     private void FixedUpdate()
     {
         itemSlot.transform.position = Vector2.Lerp(itemSlot.transform.position, slotPosition, Time.deltaTime * 2);
-        if (slotClose)
+        /*if (slotClose)
         {
             closeButton.transform.position = Vector2.Lerp(closeButton.transform.position, bottomButton, Time.deltaTime * 2);
-            //Debug.Log("test");
         }
         else
         {
@@ -158,14 +157,13 @@ public class UIManager : MonoBehaviour
             closeButton.transform.position = topButton;
             closeButton.SetActive(false);
             openButton.SetActive(true);
-            //Debug.Log("test2");
         }
         if (openButton.transform.position == new Vector3(topButton.x, topButton.y, openButton.transform.position.z))
         {
             openButton.transform.position = bottomButton;
             openButton.SetActive(false);
             closeButton.SetActive(true);
-        }
+        }*/
     }
     void Panik()
     {
@@ -313,12 +311,16 @@ public class UIManager : MonoBehaviour
     public void Close()
     {
         slotPosition = slotEnd;
-        slotClose = true;
+        openButton.SetActive(true);
+        closeButton.SetActive(false);
+        //slotClose = true;
     }
     public void Open()
     {
         slotPosition = slotStart;
-        slotClose = false;
+        openButton.SetActive(false);
+        closeButton.SetActive(true);
+        //slotClose = false;
     }
     public void ToMainMenu()
     {
@@ -355,7 +357,7 @@ public class UIManager : MonoBehaviour
         pauseScreen.SetActive(false);
         gameScreen.SetActive(true);
         GameManager.Instance.ChangeState(GameState.Game);
-        SceneManager.LoadScene(niveau + 2);
+        SceneManager.LoadScene(niveau + 1);
         Awake();
     }
     public void ToCredit()
