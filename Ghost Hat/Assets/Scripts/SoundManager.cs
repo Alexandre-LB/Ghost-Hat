@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Alexandre
 public class SoundManager : MonoBehaviour
 {
     public List<AudioSource> audios = new List<AudioSource>();

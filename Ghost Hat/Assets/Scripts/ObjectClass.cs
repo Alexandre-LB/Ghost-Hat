@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+//Alexandre et Quentin
 public class ObjectClass : MonoBehaviour
 {
     public GhostIA fantome;

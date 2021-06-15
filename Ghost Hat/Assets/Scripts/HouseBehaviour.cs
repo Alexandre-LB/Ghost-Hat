@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//Quentin et Cédric
 public class HouseBehaviour : MonoBehaviour
 {
     public int x;

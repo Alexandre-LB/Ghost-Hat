@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Cédric
 public class SwitchLight : MonoBehaviour
 {
     public GameObject LightOff;

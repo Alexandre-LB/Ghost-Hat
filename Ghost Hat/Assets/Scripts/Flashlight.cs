@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Alexandre
 public class Flashlight : Item
 {
     public GameObject lightAura;

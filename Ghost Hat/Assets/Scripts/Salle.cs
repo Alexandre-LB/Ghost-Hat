@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Quentin et Cédric
 public class Salle : MonoBehaviour
 {
     float timerCake = 0;

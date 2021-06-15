@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//Quentin et Cédric
 public class GhostIA : MonoBehaviour
 {
     public HouseBehaviour maison;
