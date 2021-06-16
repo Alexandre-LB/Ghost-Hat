@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     int minUni;
     int minDiz;
     [HideInInspector]
-    public float tictac = 300;
+    public float tictac;
 
     public bool placed;
     public Text time;
@@ -153,6 +153,7 @@ public class UIManager : MonoBehaviour
         _item = Inventory.None;
         placed = false;
         panik = 100;
+        tictac = 300;
         panikCountDown = 0;
         timer = 0;
         hour = 19;
