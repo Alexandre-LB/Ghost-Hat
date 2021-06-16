@@ -18,7 +18,7 @@ public class CameraItem : Item
         this.objectCamera = GameObject.FindGameObjectWithTag("Cam");
     }
 
-    void FixedUpdate()
+    void Update()
     {
         this.mainCam = GameObject.FindGameObjectWithTag("MainCamera").transform;
         if (move == false)
