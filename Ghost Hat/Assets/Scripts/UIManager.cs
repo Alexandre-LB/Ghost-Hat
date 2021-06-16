@@ -159,7 +159,7 @@ public class UIManager : MonoBehaviour
         minUni = 0;
         minDiz = 0;
         pointeur.rectTransform.position = new Vector2(1510, 940);
-        time.text = hour + "H" + minDiz + minUni;
+        time.text = hour + " : " + minDiz + minUni;
         slotPosition = itemSlot.transform.position;
         slotStart = itemSlot.transform.position;
         slotEnd = new Vector2(itemSlot.transform.position.x, itemSlot.transform.position.y - 300);
@@ -229,7 +229,7 @@ public class UIManager : MonoBehaviour
                 minDiz = 0;
                 hour = 0;
             }
-            time.text = hour + "H" + minDiz + minUni;
+            time.text = hour + " : " + minDiz + minUni;
             timer = 0;
         }
     }
